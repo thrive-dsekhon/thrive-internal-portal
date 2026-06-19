@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Staff & Client Policies — Thrive Speech Therapy Internal Portal</title>
+<link rel="stylesheet" href="assets/styles.css">
+<style>
+  .doc-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    transition: all 0.25s;
+  }
+  .doc-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-hover); border-color: var(--lavender); }
+  .doc-icon {
+    width: 52px; height: 52px;
+    border-radius: 12px;
+    background: var(--lilac);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    flex-shrink: 0;
+  }
+  .doc-info { flex: 1; }
+  .doc-info h4 { color: var(--dark); font-size: 15px; margin-bottom: 4px; }
+  .doc-info p { font-size: 13px; color: var(--text-muted); margin-bottom: 12px; }
+  .doc-meta { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div style="display:flex;align-items:center;justify-content:center;gap:16px;margin-bottom:24px;position:relative;z-index:1;">
+    <div style="text-align:center;">
+      <div style="font-family:'Poppins',sans-serif;font-size:14px;font-weight:600;color:rgba(255,255,255,0.7);letter-spacing:2px;text-transform:uppercase;">THRIVE SPEECH THERAPY</div>
+      <div style="font-family:'Poppins',sans-serif;font-size:11px;color:rgba(255,255,255,0.5);letter-spacing:3px;text-transform:uppercase;">Staff & Client Resource Portal</div>
+    </div>
+  </div>
+  <h1>Staff & Client Policies</h1>
+  <p>Our policies are designed to create clarity, trust, and a great experience — for our team and the families we serve. Clear guidelines help everyone thrive.</p>
+</section>
+
+<!-- SEARCH -->
+<section class="section-sm bg-off-white" style="padding:40px 0;">
+  <div class="container">
+    <p style="text-align:center;font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted);margin-bottom:16px;">Search Policies & Documents</p>
+    <div class="search-wrap">
+      <input type="text" class="search-input" id="policySearch" placeholder="Search by keyword, policy name, topic..." oninput="runSearch(this.value)">
+      <span class="search-icon">🔍</span>
+      <div class="search-results" id="searchResults"></div>
+    </div>
+  </div>
+</section>
+
+<!-- POLICIES FOR STAFF -->
+<section class="section bg-white">
+  <div class="container">
+    <span class="section-label">For Our Team</span>
+    <h2 class="section-title">Policies for Staff</h2>
+    <div class="divider"></div>
+    <p class="section-subtitle" style="margin-bottom:40px;">Important documents every Thrive team member should know. Clear expectations, fair guidelines, and everything you need to thrive.</p>
+
+    <!-- STAFF TABS -->
+    <div class="tabs">
+      <div class="tab-nav">
+        <button class="tab-btn active" onclick="switchTab('employment', this)">💼 Employment</button>
+        <button class="tab-btn" onclick="switchTab('workers-comp', this)">🏥 Workers' Comp</button>
+      </div>
+
+      <!-- EMPLOYMENT TAB -->
+      <div class="tab-panel active" id="tab-employment">
+        <h3 style="margin-bottom:8px;color:var(--dark);">Employment Documents</h3>
+        <p style="margin-bottom:28px;font-size:14px;">Core documents every Thrive team member should review and keep handy.</p>
+        <div class="grid-3">
+          <div class="doc-card">
+            <div class="doc-icon">📘</div>
+            <div class="doc-info">
+              <h4>Employee Handbook</h4>
+              <p>Your complete guide to working at Thrive — policies, expectations, benefits, and culture.</p>
+              <div class="doc-meta">
+                <span class="badge badge-mauve">PDF · 692 KB</span>
+                <a href="https://drive.google.com/drive/folders/1k0eVfQ3DpEGmvIoX5WWvYjb92U-LWVWY?usp=drive_link" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Open Document →</a>
+              </div>
+            </div>
+          </div>
+          <div class="doc-card">
+            <div class="doc-icon">🤰</div>
+            <div class="doc-info">
+              <h4>Maternity Leave Policy</h4>
+              <p>Everything you need to know about maternity leave, timelines, and returning to work.</p>
+              <div class="doc-meta">
+                <span class="badge badge-mauve">PDF · 78 KB</span>
+                <a href="https://drive.google.com/drive/folders/1k0eVfQ3DpEGmvIoX5WWvYjb92U-LWVWY?usp=drive_link" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Open Document →</a>
+              </div>
+            </div>
+          </div>
+          <div class="doc-card">
+            <div class="doc-icon">📅</div>
+            <div class="doc-info">
+              <h4>Holiday Calendar & Policy</h4>
+              <p>Thrive's official holiday schedule and time-off policies for the year.</p>
+              <div class="doc-meta">
+                <span class="badge badge-mauve">PDF · 145 KB</span>
+                <a href="https://drive.google.com/drive/folders/1k0eVfQ3DpEGmvIoX5WWvYjb92U-LWVWY?usp=drive_link" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Open Document →</a>
+              </div>
+            </div>
+          </div>
+          <div class="doc-card">
+            <div class="doc-icon">📊</div>
+            <div class="doc-info">
+              <h4>40 Sessions Per Week Policy</h4>
+              <p>Guidelines and expectations around caseload capacity and weekly session limits.</p>
+              <div class="doc-meta">
+                <span class="badge badge-mauve">PDF · 73 KB</span>
+                <a href="https://drive.google.com/drive/folders/1k0eVfQ3DpEGmvIoX5WWvYjb92U-LWVWY?usp=drive_link" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Open Document →</a>
+              </div>
+            </div>
+          </div>
+          <div class="doc-card">
+            <div class="doc-icon">📸</div>
+            <div class="doc-info">
+              <h4>Photo Release Form</h4>
+              <p>Client photography and media consent form for use during therapy sessions.</p>
+              <div class="doc-meta">
+                <span class="badge badge-sage">Form</span>
+                <a href="https://drive.google.com/file/d/1tKzsgYchAd0-BzuVWMcKkD8MczeORkRg/view?usp=drive_link" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Open Form →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- WORKERS COMP TAB -->
+      <div class="tab-panel" id="tab-workers-comp">
+        <h3 style="margin-bottom:8px;color:var(--dark);">Workers' Compensation</h3>
+        <p style="margin-bottom:28px;font-size:14px;">Everything you need to know about workplace injury coverage and claims at Thrive.</p>
+        <div class="grid-3">
+          <div class="doc-card">
+            <div class="doc-icon">🛡️</div>
+            <div class="doc-info">
+              <h4>Workers' Compensation Policy</h4>
+              <p>The complete Workers' Compensation policy covering eligibility, reporting, and benefits.</p>
+              <div class="doc-meta">
+                <span class="badge badge-mauve">PDF · 2.1 MB</span>
+                <a href="https://drive.google.com/drive/folders/1k0eVfQ3DpEGmvIoX5WWvYjb92U-LWVWY?usp=drive_link" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Open Document →</a>
+              </div>
+            </div>
+          </div>
+          <div class="doc-card">
+            <div class="doc-icon">📋</div>
+            <div class="doc-info">
+              <h4>Workers' Comp Guide for Thrivers</h4>
+              <p>A practical, easy-to-understand guide to navigating Workers' Compensation at Thrive.</p>
+              <div class="doc-meta">
+                <span class="badge badge-mauve">PDF · 1.5 MB</span>
+                <a href="https://drive.google.com/drive/folders/1k0eVfQ3DpEGmvIoX5WWvYjb92U-LWVWY?usp=drive_link" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Open Document →</a>
+              </div>
+            </div>
+          </div>
+          <div class="doc-card">
+            <div class="doc-icon">🎓</div>
+            <div class="doc-info">
+              <h4>Workers' Comp Training</h4>
+              <p>Required training materials to help you understand your rights and responsibilities.</p>
+              <div class="doc-meta">
+                <span class="badge badge-mauve">PDF · 217 KB</span>
+                <a href="https://drive.google.com/drive/folders/1k0eVfQ3DpEGmvIoX5WWvYjb92U-LWVWY?usp=drive_link" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Open Document →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- POLICIES FOR CLIENTS -->
+<section class="section bg-off-white">
+  <div class="container">
+    <span class="section-label">For the Families We Serve</span>
+    <h2 class="section-title">Policies for Clients</h2>
+    <div class="divider"></div>
+    <p class="section-subtitle" style="margin-bottom:40px;">These policies help us deliver consistent, high-quality care while honoring the time and commitment of both our team and our families.</p>
+    <div class="grid-2">
+      <div class="doc-card">
+        <div class="doc-icon" style="background:rgba(131,158,151,0.15);">🚫</div>
+        <div class="doc-info">
+          <h4>No Show / Late Cancel Policy</h4>
+          <p>Our cancellation policy requires <strong style="color:var(--mauve);">2 hours notice</strong> before a scheduled session. This policy ensures fairness to our team and other families waiting for care.</p>
+          <div class="doc-meta">
+            <span class="badge badge-mauve">PDF · 155 KB</span>
+            <a href="https://drive.google.com/drive/folders/1k0eVfQ3DpEGmvIoX5WWvYjb92U-LWVWY?usp=drive_link" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Open Document →</a>
+          </div>
+        </div>
+      </div>
+      <div class="doc-card">
+        <div class="doc-icon" style="background:rgba(131,158,151,0.15);">📆</div>
+        <div class="doc-info">
+          <h4>Attendance Policy</h4>
+          <p>Guidelines for consistent session attendance and how we support families in maintaining their child's therapy schedule for best outcomes.</p>
+          <div class="doc-meta">
+            <span class="badge badge-mauve">PDF · 86 KB</span>
+            <a href="https://drive.google.com/drive/folders/1k0eVfQ3DpEGmvIoX5WWvYjb92U-LWVWY?usp=drive_link" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Open Document →</a>
+          </div>
+        </div>
+      </div>
+      <div class="doc-card">
+        <div class="doc-icon" style="background:rgba(131,158,151,0.15);">🌡️</div>
+        <div class="doc-info">
+          <h4>Health & Illness Policy</h4>
+          <p>When to keep your child home and how we protect the health and safety of all children and clinicians in our care.</p>
+          <div class="doc-meta">
+            <span class="badge badge-mauve">PDF · 211 KB</span>
+            <a href="https://drive.google.com/drive/folders/1k0eVfQ3DpEGmvIoX5WWvYjb92U-LWVWY?usp=drive_link" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Open Document →</a>
+          </div>
+        </div>
+      </div>
+      <div class="doc-card">
+        <div class="doc-icon" style="background:rgba(131,158,151,0.15);">⛈️</div>
+        <div class="doc-info">
+          <h4>Severe Weather Cancellation Policy</h4>
+          <p>Our procedures for session cancellations and rescheduling during severe weather events in the Houston area.</p>
+          <div class="doc-meta">
+            <span class="badge badge-mauve">PDF · 76 KB</span>
+            <a href="https://drive.google.com/drive/folders/1k0eVfQ3DpEGmvIoX5WWvYjb92U-LWVWY?usp=drive_link" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Open Document →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMMON QUESTIONS -->
+<section class="section bg-white">
+  <div class="container">
+    <span class="section-label">Got Questions?</span>
+    <h2 class="section-title">Common Questions</h2>
+    <div class="divider"></div>
+    <p class="section-subtitle" style="margin-bottom:40px;">Quick answers to the questions our team and families ask most often.</p>
+    <div>
+      <div class="accordion-item">
+        <button class="accordion-btn" onclick="toggleAccordion(this)">
+          What is the cancellation policy?
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-content">
+          <p>Thrive Speech Therapy requires a minimum of <strong>2 hours notice</strong> before a scheduled session to cancel without penalty. Cancellations made with less than 2 hours notice or no-shows may be subject to a late cancellation fee. This policy exists to respect our clinicians' time and allow other families on our waitlist to access care. Please refer to the No Show / Late Cancel Policy document for complete details.</p>
+          <div style="margin-top:16px;">
+            <a href="https://drive.google.com/drive/folders/1k0eVfQ3DpEGmvIoX5WWvYjb92U-LWVWY?usp=drive_link" target="_blank" rel="noopener" class="btn btn-outline btn-sm">View Full Policy →</a>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-btn" onclick="toggleAccordion(this)">
+          What happens if a client misses a session without notice?
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-content">
+          <p>No-shows or cancellations with less than 2 hours notice are documented and may result in a late cancellation fee per our policy. Repeated no-shows may affect a client's scheduling priority. Our team will always reach out to support families in maintaining consistent attendance, as regular attendance is critical to achieving the best therapy outcomes for each child.</p>
+          <div style="margin-top:16px;">
+            <a href="https://drive.google.com/drive/folders/1k0eVfQ3DpEGmvIoX5WWvYjb92U-LWVWY?usp=drive_link" target="_blank" rel="noopener" class="btn btn-outline btn-sm">View Attendance Policy →</a>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-btn" onclick="toggleAccordion(this)">
+          What are the holiday and time-off policies?
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-content">
+          <p>Thrive observes several major holidays throughout the year during which clinics are closed. Staff should refer to the Holiday Calendar & Policy document for the complete list of observed holidays, clinic closure dates, and guidelines for requesting time off. All time-off requests must be submitted and approved in advance through Gusto.</p>
+          <div style="margin-top:16px;">
+            <a href="https://drive.google.com/drive/folders/1k0eVfQ3DpEGmvIoX5WWvYjb92U-LWVWY?usp=drive_link" target="_blank" rel="noopener" class="btn btn-outline btn-sm">View Holiday Policy →</a>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-btn" onclick="toggleAccordion(this)">
+          How do I report a workplace injury?
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-content">
+          <p>Any workplace injury should be reported immediately to your clinic supervisor and HR. Thrive's Workers' Compensation Policy outlines the complete reporting process, timeline requirements, and your rights as an employee. Please do not delay reporting — timely reporting ensures you receive the benefits and support you are entitled to. Review the Workers' Comp Guide for Thrivers for step-by-step instructions.</p>
+          <div style="margin-top:16px;">
+            <a href="https://drive.google.com/drive/folders/1k0eVfQ3DpEGmvIoX5WWvYjb92U-LWVWY?usp=drive_link" target="_blank" rel="noopener" class="btn btn-outline btn-sm">View Workers' Comp Documents →</a>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-btn" onclick="toggleAccordion(this)">
+          What is the severe weather cancellation procedure?
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-content">
+          <p>During severe weather events — including hurricanes, flooding, or other Houston-area weather emergencies — Thrive will communicate clinic closure decisions through official company channels as early as possible. Families and staff should refer to the Severe Weather Cancellation Policy for complete procedures, including how sessions are rescheduled and how fees are handled during weather-related closures.</p>
+          <div style="margin-top:16px;">
+            <a href="https://drive.google.com/drive/folders/1k0eVfQ3DpEGmvIoX5WWvYjb92U-LWVWY?usp=drive_link" target="_blank" rel="noopener" class="btn btn-outline btn-sm">View Weather Policy →</a>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-btn" onclick="toggleAccordion(this)">
+          Who do I contact if I have a question about a policy?
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-content">
+          <p>For questions about any Thrive policy, please reach out to your clinic supervisor or contact our admin team directly. We are always here to help clarify and support you.</p>
+          <div style="margin-top:16px;display:flex;gap:12px;flex-wrap:wrap;">
+            <a href="mailto:admin@thrivespeech.net" class="btn btn-outline btn-sm">✉️ admin@thrivespeech.net</a>
+            <a href="tel:+12819821313" class="btn btn-outline btn-sm">📞 (281) 982-1313</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-logo">THRIVE Speech Therapy</div>
+  <p style="color:rgba(255,255,255,0.6);font-size:13px;">Internal Staff Portal</p>
+  <div class="footer-restricted">🔒 Authorized Thrive Team Members Only</div>
+  <p class="footer-legal">© 2026 Thrive Speech Therapy, PLLC. All rights reserved. All content, materials, policies, and resources contained within this portal are the confidential and proprietary property of Thrive Speech Therapy, PLLC and may not be reproduced, distributed, or disclosed without express written permission. This portal may contain personal health information protected under HIPAA and applicable federal and state privacy laws.</p>
+  <p class="footer-legal">If you have accessed this page in error, please exit immediately and contact <a href="mailto:admin@thrivespeech.net" style="color:var(--lavender);">admin@thrivespeech.net</a>.</p>
+  <p class="footer-heart">Thank you for being part of the Thrive family. Together, we help every child find their voice. 💜</p>
+</footer>
+
+<script>
+// Tab switching
+function switchTab(id, btn) {
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + id).classList.add('active');
+  btn.classList.add('active');
+}
+
+// Accordion
+function toggleAccordion(btn) {
+  const content = btn.nextElementSibling;
+  const isOpen = content.classList.contains('open');
+  document.querySelectorAll('.accordion-content').forEach(c => c.classList.remove('open'));
+  document.querySelectorAll('.accordion-btn').forEach(b => b.classList.remove('active'));
+  if (!isOpen) { content.classList.add('open'); btn.classList.add('active'); }
+}
+
+// Search index
+const searchData = [
+  { title: 'Employee Handbook', desc: 'Complete guide to working at Thrive — policies, expectations, benefits', keywords: ['handbook', 'employee', 'policies', 'benefits', 'employment', 'guide'], url: 'https://drive.google.com/drive/folders/1k0eVfQ3DpEGmvIoX5WWvYjb92U-LWVWY?usp=drive_link', icon: '📘' },
+  { title: 'Maternity Leave Policy', desc: 'Maternity leave, timelines, and returning to work', keywords: ['maternity', 'leave', 'pregnancy', 'baby', 'parental', 'mother'], url: 'https://drive.google.com/drive/folders/1k0eVfQ3DpEGmvIoX5WWvYjb92U-LWVWY?usp=drive_link', icon: '🤰' },
+  { title: 'Holiday Calendar & Policy', desc: 'Official holiday schedule and time-off policies', keywords: ['holiday', 'calendar', 'time off', 'pto', 'vacation', 'days off', 'closure'], url: 'https://drive.google.com/drive/folders/1k0eVfQ3DpEGmvIoX5WWvYjb92U-LWVWY?usp=drive_link', icon: '📅' },
+  { title: '40 Sessions Per Week Policy', desc: 'Caseload capacity and weekly session limits', keywords: ['sessions', 'caseload', '40', 'capacity', 'weekly', 'limits', 'scheduling'], url: 'https://drive.google.com/drive/folders/1k0eVfQ3DpEGmvIoX5WWvYjb92U-LWVWY?usp=drive_link', icon: '📊' },
+  { title: 'Photo Release Form', desc: 'Client photography and media consent form', keywords: ['photo', 'release', 'consent', 'photography', 'media', 'form', 'picture'], url: 'https://drive.google.com/file/d/1tKzsgYchAd0-BzuVWMcKkD8MczeORkRg/view?usp=drive_link', icon: '📸' },
+  { title: "Workers' Compensation Policy", desc: 'Complete Workers Comp policy — eligibility, reporting, benefits', keywords: ['workers comp', 'compensation', 'injury', 'workplace injury', 'workers', 'wc'], url: 'https://drive.google.com/drive/folders/1k0eVfQ3DpEGmvIoX5WWvYjb92U-LWVWY?usp=drive_link', icon: '🛡️' },
+  { title: "Workers' Comp Guide for Thrivers", desc: 'Practical guide to navigating Workers Compensation', keywords: ['workers comp guide', 'injury guide', 'compensation guide', 'how to', 'claim'], url: 'https://drive.google.com/drive/folders/1k0eVfQ3DpEGmvIoX5WWvYjb92U-LWVWY?usp=drive_link', icon: '📋' },
+  { title: "Workers' Comp Training", desc: 'Required training materials for Workers Compensation', keywords: ['training', 'workers comp training', 'required training', 'compliance'], url: 'https://drive.google.com/drive/folders/1k0eVfQ3DpEGmvIoX5WWvYjb92U-LWVWY?usp=drive_link', icon: '🎓' },
+  { title: 'No Show / Late Cancel Policy', desc: 'Cancellation requires 2 hours notice before session', keywords: ['cancel', 'cancellation', 'no show', 'late cancel', '2 hours', 'missed', 'appointment', 'absence'], url: 'https://drive.google.com/drive/folders/1k0eVfQ3DpEGmvIoX5WWvYjb92U-LWVWY?usp=drive_link', icon: '🚫' },
+  { title: 'Attendance Policy', desc: 'Session attendance guidelines and expectations', keywords: ['attendance', 'session', 'schedule', 'consistent', 'regular'], url: 'https://drive.google.com/drive/folders/1k0eVfQ3DpEGmvIoX5WWvYjb92U-LWVWY?usp=drive_link', icon: '📆' },
+  { title: 'Health & Illness Policy', desc: 'When to keep your child home — health and safety guidelines', keywords: ['health', 'illness', 'sick', 'fever', 'contagious', 'covid', 'safety'], url: 'https://drive.google.com/drive/folders/1k0eVfQ3DpEGmvIoX5WWvYjb92U-LWVWY?usp=drive_link', icon: '🌡️' },
+  { title: 'Severe Weather Cancellation Policy', desc: 'Procedures for session cancellations during severe weather', keywords: ['weather', 'severe', 'hurricane', 'storm', 'flood', 'emergency', 'closure'], url: 'https://drive.google.com/drive/folders/1k0eVfQ3DpEGmvIoX5WWvYjb92U-LWVWY?usp=drive_link', icon: '⛈️' },
+];
+
+function runSearch(query) {
+  const results = document.getElementById('searchResults');
+  if (!query || query.length < 2) { results.classList.remove('show'); return; }
+  const q = query.toLowerCase();
+  const matches = searchData.filter(item =>
+    item.title.toLowerCase().includes(q) ||
+    item.desc.toLowerCase().includes(q) ||
+    item.keywords.some(k => k.toLowerCase().includes(q))
+  ).slice(0, 6);
+  if (matches.length === 0) {
+    results.innerHTML = `<div class="search-no-results">No results for "<strong>${query}</strong>". Try different keywords or browse the sections above.<br><br><a href="mailto:admin@thrivespeech.net" style="color:var(--mauve);">Contact admin@thrivespeech.net for help</a></div>`;
+  } else {
+    results.innerHTML = matches.map(m => `
+      <a href="${m.url}" target="_blank" rel="noopener" class="search-result-item" style="text-decoration:none;">
+        <span class="search-result-icon">${m.icon}</span>
+        <div><div class="search-result-title">${m.title}</div><div class="search-result-desc">${m.desc}</div></div>
+      </a>`).join('');
+  }
+  results.classList.add('show');
+}
+
+document.addEventListener('click', e => {
+  if (!e.target.closest('.search-wrap')) document.getElementById('searchResults').classList.remove('show');
+});
+</script>
+</body>
+</html>

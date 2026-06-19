@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resources — Thrive Speech Therapy Internal Portal</title>
+<link rel="stylesheet" href="assets/styles.css">
+<style>
+  .resource-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+    transition: all 0.25s;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  .resource-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); border-color: var(--lavender); }
+  .resource-card-icon { font-size: 32px; margin-bottom: 12px; }
+  .resource-card h4 { color: var(--dark); font-family: 'Poppins', sans-serif; font-size: 15px; margin-bottom: 6px; }
+  .resource-card p { font-size: 13px; color: var(--text-muted); flex: 1; margin-bottom: 16px; }
+  .resource-card .btn { width: 100%; text-align: center; justify-content: center; }
+  .category-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 28px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid var(--border);
+  }
+  .category-icon-lg { font-size: 40px; }
+  .category-header h3 { color: var(--dark); margin: 0; }
+  .category-header p { color: var(--text-muted); font-size: 14px; margin: 4px 0 0; }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div style="width:60px;height:60px;border-radius:50%;background:rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-size:28px;position:relative;z-index:1;">📚</div>
+  <h1>Your Thrive Resource Hub</h1>
+  <p>Everything you need to deliver exceptional care — company documents, clinical tools, CEUs, parent resources, and evidence-based materials for our Thrive team.</p>
+  <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;position:relative;z-index:1;">
+    <a href="#company-docs" class="btn btn-secondary btn-sm">🗂 Company Docs</a>
+    <a href="#clinical" class="btn btn-secondary btn-sm">🩺 Clinical</a>
+    <a href="#tools" class="btn btn-secondary btn-sm">🔧 Tools</a>
+    <a href="#ceus" class="btn btn-secondary btn-sm">🎓 CEUs</a>
+    <a href="#quick-tools" class="btn btn-secondary btn-sm">⚡ Quick Tools</a>
+    <a href="#parent-hub" class="btn btn-secondary btn-sm">👨‍👩‍👧 Parent Hub</a>
+  </div>
+</section>
+
+<!-- SEARCH -->
+<section class="section-sm bg-off-white" style="padding:40px 0;">
+  <div class="container">
+    <p style="text-align:center;font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted);margin-bottom:16px;">Search All Resources</p>
+    <div class="search-wrap">
+      <input type="text" class="search-input" id="resourceSearch" placeholder="Search all resources — try articulation, AAC, milestones, goals, bilingual..." oninput="runSearch(this.value)">
+      <span class="search-icon">🔍</span>
+      <div class="search-results" id="searchResults"></div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPANY CORE DOCUMENTS -->
+<section class="section bg-white" id="company-docs">
+  <div class="container">
+    <div class="category-header">
+      <span class="category-icon-lg">🗂️</span>
+      <div>
+        <h3>Core Company Resources</h3>
+        <p>Official Thrive Speech Therapy documents — essential clinical and operational references</p>
+      </div>
+    </div>
+    <div class="grid-3">
+      <div class="resource-card">
+        <div class="resource-card-icon">📘</div>
+        <h4>Thrive Resource Document 1</h4>
+        <p>Official company resource document for staff reference. Access and review as needed.</p>
+        <a href="https://drive.google.com/drive/folders/1GeAD5p06gsxH83w0ncOl055G136pxZEt?dmr=1&ec=wgc-drive-globalnav-goto" target="_blank" rel="noopener" class="btn btn-primary">Open Document →</a>
+      </div>
+      <div class="resource-card">
+        <div class="resource-card-icon">📋</div>
+        <h4>Thrive Resource Document 2</h4>
+        <p>Official company resource document for staff reference. Access and review as needed.</p>
+        <a href="https://drive.google.com/drive/folders/1GeAD5p06gsxH83w0ncOl055G136pxZEt?dmr=1&ec=wgc-drive-globalnav-goto" target="_blank" rel="noopener" class="btn btn-primary">Open Document →</a>
+      </div>
+      <div class="resource-card" style="border:2px dashed var(--border);background:var(--off-white);justify-content:center;align-items:center;text-align:center;">
+        <div style="font-size:36px;margin-bottom:12px;">➕</div>
+        <h4 style="color:var(--text-muted);">View All Company Documents</h4>
+        <p>Access the complete Thrive resources folder in Google Drive.</p>
+        <a href="https://drive.google.com/drive/folders/1GeAD5p06gsxH83w0ncOl055G136pxZEt?dmr=1&ec=wgc-drive-globalnav-goto" target="_blank" rel="noopener" class="btn btn-outline">Open Drive Folder →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CLINICAL RESOURCES -->
+<section class="section bg-off-white" id="clinical">
+  <div class="container">
+    <div class="category-header">
+      <span class="category-icon-lg">🩺</span>
+      <div>
+        <h3>Clinical Resources</h3>
+        <p>Evidence-based tools, therapy resources, and clinical references for SLPs — all free</p>
+      </div>
+    </div>
+    <div class="grid-3">
+      <div class="resource-card">
+        <div class="resource-card-icon">🔤</div>
+        <h4>ASHA — Articulation Resources</h4>
+        <p>American Speech-Language-Hearing Association's evidence-based articulation and phonology resources for clinical practice.</p>
+        <span class="badge badge-free" style="margin-bottom:12px;">Free</span>
+        <a href="https://www.asha.org/practice-portal/clinical-topics/articulation-and-phonology/" target="_blank" rel="noopener" class="btn btn-sage">Visit Resource →</a>
+      </div>
+      <div class="resource-card">
+        <div class="resource-card-icon">🧩</div>
+        <h4>AAC Institute</h4>
+        <p>Free resources, research, and learning materials dedicated to augmentative and alternative communication for AAC users.</p>
+        <span class="badge badge-free" style="margin-bottom:12px;">Free</span>
+        <a href="https://www.aacinstitute.org/" target="_blank" rel="noopener" class="btn btn-sage">Visit Resource →</a>
+      </div>
+      <div class="resource-card">
+        <div class="resource-card-icon">🌱</div>
+        <h4>ASHA Early Intervention</h4>
+        <p>Clinical guidance and resources for early intervention speech-language services for children birth through 3 years.</p>
+        <span class="badge badge-free" style="margin-bottom:12px;">Free</span>
+        <a href="https://www.asha.org/practice-portal/professional-issues/early-intervention/" target="_blank" rel="noopener" class="btn btn-sage">Visit Resource →</a>
+      </div>
+      <div class="resource-card">
+        <div class="resource-card-icon">👥</div>
+        <h4>Social Thinking</h4>
+        <p>Practical frameworks and free resources for supporting social communication and pragmatic language development.</p>
+        <span class="badge badge-free" style="margin-bottom:12px;">Free Materials Available</span>
+        <a href="https://www.socialthinking.com/free-articles" target="_blank" rel="noopener" class="btn btn-sage">Visit Resource →</a>
+      </div>
+      <div class="resource-card">
+        <div class="resource-card-icon">🧠</div>
+        <h4>Neurodiversity-Affirming SLP Resources</h4>
+        <p>ASHA's resources on affirming approaches to serving neurodivergent clients including autistic individuals.</p>
+        <span class="badge badge-free" style="margin-bottom:12px;">Free</span>
+        <a href="https://www.asha.org/practice-portal/professional-issues/autism/" target="_blank" rel="noopener" class="btn btn-sage">Visit Resource →</a>
+      </div>
+      <div class="resource-card">
+        <div class="resource-card-icon">🌎</div>
+        <h4>Bilingual SLP Resources — ASHA</h4>
+        <p>Clinical resources for serving bilingual and multilingual children including assessment and treatment considerations.</p>
+        <span class="badge badge-free" style="margin-bottom:12px;">Free</span>
+        <a href="https://www.asha.org/practice-portal/professional-issues/bilingual-service-delivery/" target="_blank" rel="noopener" class="btn btn-sage">Visit Resource →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THERAPY TOOLS -->
+<section class="section bg-white" id="tools">
+  <div class="container">
+    <div class="category-header">
+      <span class="category-icon-lg">🔧</span>
+      <div>
+        <h3>Therapy Materials &amp; Tools</h3>
+        <p>Free worksheets, activities, and session planning tools for daily clinical use</p>
+      </div>
+    </div>
+    <div class="grid-3">
+      <div class="resource-card">
+        <div class="resource-card-icon">📄</div>
+        <h4>Teachers Pay Teachers — Free SLP</h4>
+        <p>Filter by free materials to access thousands of SLP worksheets, activities, and therapy resources created by clinicians.</p>
+        <span class="badge badge-free" style="margin-bottom:12px;">Free Filter Available</span>
+        <a href="https://www.teacherspayteachers.com/Browse/Search:speech%20language%20pathology/Price-Range/Free" target="_blank" rel="noopener" class="btn btn-outline">Visit Resource →</a>
+      </div>
+      <div class="resource-card">
+        <div class="resource-card-icon">🎯</div>
+        <h4>Speechy Musings — Free Resources</h4>
+        <p>Free speech therapy materials, activities, and resources created by SLPs specifically for pediatric clinical settings.</p>
+        <span class="badge badge-free" style="margin-bottom:12px;">Free</span>
+        <a href="https://www.speechymusings.com/free-speech-therapy-materials/" target="_blank" rel="noopener" class="btn btn-outline">Visit Resource →</a>
+      </div>
+      <div class="resource-card">
+        <div class="resource-card-icon">📝</div>
+        <h4>SLP Toolkit — Goal Bank</h4>
+        <p>Comprehensive goal bank and session planning resources to support IEP goal writing and progress monitoring.</p>
+        <span class="badge badge-free" style="margin-bottom:12px;">Free Access Available</span>
+        <a href="https://www.slptoolkit.com/" target="_blank" rel="noopener" class="btn btn-outline">Visit Resource →</a>
+      </div>
+      <div class="resource-card">
+        <div class="resource-card-icon">🎮</div>
+        <h4>Boom Learning — Free Decks</h4>
+        <p>Interactive digital therapy activities and games for pediatric SLP sessions — filter for free decks.</p>
+        <span class="badge badge-free" style="margin-bottom:12px;">Free Decks Available</span>
+        <a href="https://wow.boomlearning.com/search?q=speech+therapy&a=free" target="_blank" rel="noopener" class="btn btn-outline">Visit Resource →</a>
+      </div>
+      <div class="resource-card">
+        <div class="resource-card-icon">🗣️</div>
+        <h4>Smarty Ears — Free Resources</h4>
+        <p>Free speech therapy apps and digital resources for iOS and Android devices for use in pediatric therapy sessions.</p>
+        <span class="badge badge-free" style="margin-bottom:12px;">Free Resources</span>
+        <a href="https://www.smartyearsapps.com/free-speech-therapy-resources/" target="_blank" rel="noopener" class="btn btn-outline">Visit Resource →</a>
+      </div>
+      <div class="resource-card">
+        <div class="resource-card-icon">📊</div>
+        <h4>SLP Now — Progress Monitoring</h4>
+        <p>Free data collection sheets and progress monitoring templates for tracking client outcomes efficiently.</p>
+        <span class="badge badge-free" style="margin-bottom:12px;">Free Templates</span>
+        <a href="https://slpnow.com/category/free-resources/" target="_blank" rel="noopener" class="btn btn-outline">Visit Resource →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CEUs -->
+<section class="section bg-off-white" id="ceus">
+  <div class="container">
+    <div class="category-header">
+      <span class="category-icon-lg">🎓</span>
+      <div>
+        <h3>CEUs &amp; Professional Development</h3>
+        <p>Free and low-cost continuing education resources to keep growing as a clinician</p>
+      </div>
+    </div>
+    <div class="grid-3">
+      <div class="resource-card">
+        <div class="resource-card-icon">🏛️</div>
+        <h4>ASHA Learning Center</h4>
+        <p>ASHA's official online learning platform with free and paid CEU courses across all SLP specialty areas.</p>
+        <span class="badge badge-free" style="margin-bottom:12px;">Free Courses Available</span>
+        <a href="https://www.asha.org/learning-center/" target="_blank" rel="noopener" class="btn btn-sage">Visit Resource →</a>
+      </div>
+      <div class="resource-card">
+        <div class="resource-card-icon">📺</div>
+        <h4>SLP Nerdcast — Free Podcast CEUs</h4>
+        <p>Evidence-based podcast episodes on pediatric SLP topics with free ASHA CEU options for qualifying episodes.</p>
+        <span class="badge badge-free" style="margin-bottom:12px;">Free CEUs Available</span>
+        <a href="https://www.slpnerdcast.com/" target="_blank" rel="noopener" class="btn btn-sage">Visit Resource →</a>
+      </div>
+      <div class="resource-card">
+        <div class="resource-card-icon">🎙️</div>
+        <h4>Thought Leaders in Speech</h4>
+        <p>Free webinars and podcasts from leading SLP researchers and clinicians on current evidence and best practices.</p>
+        <span class="badge badge-free" style="margin-bottom:12px;">Free</span>
+        <a href="https://www.asha.org/events/asha-learning-pass/" target="_blank" rel="noopener" class="btn btn-sage">Visit Resource →</a>
+      </div>
+      <div class="resource-card">
+        <div class="resource-card-icon">🌐</div>
+        <h4>SpeechPathology.com</h4>
+        <p>Online CEU library with hundreds of courses for SLPs including free trial access to select courses.</p>
+        <span class="badge badge-free" style="margin-bottom:12px;">Free Trial Available</span>
+        <a href="https://www.speechpathology.com/" target="_blank" rel="noopener" class="btn btn-sage">Visit Resource →</a>
+      </div>
+      <div class="resource-card">
+        <div class="resource-card-icon">🔬</div>
+        <h4>The Informed SLP</h4>
+        <p>Monthly research summaries making the latest SLP evidence accessible and actionable for busy clinicians.</p>
+        <span class="badge badge-free" style="margin-bottom:12px;">Free Articles Available</span>
+        <a href="https://www.theinformedslp.com/" target="_blank" rel="noopener" class="btn btn-sage">Visit Resource →</a>
+      </div>
+      <div class="resource-card">
+        <div class="resource-card-icon">📖</div>
+        <h4>AAC Learning Journey</h4>
+        <p>Free online learning modules dedicated to AAC implementation, feature matching, and supporting AAC users across settings.</p>
+        <span class="badge badge-free" style="margin-bottom:12px;">Free</span>
+        <a href="https://www.aaclearningjourney.com.au/" target="_blank" rel="noopener" class="btn btn-sage">Visit Resource →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUICK TOOLS -->
+<section class="section bg-white" id="quick-tools">
+  <div class="container">
+    <div class="category-header">
+      <span class="category-icon-lg">⚡</span>
+      <div>
+        <h3>Quick Daily Tools</h3>
+        <p>Screening tools, milestones, norms, and references for fast clinical decisions</p>
+      </div>
+    </div>
+    <div class="grid-3">
+      <div class="resource-card">
+        <div class="resource-card-icon">📏</div>
+        <h4>CDC Milestone Tracker</h4>
+        <p>Official CDC developmental milestone checklists for children from 2 months to 5 years — ideal for parent education.</p>
+        <span class="badge badge-free" style="margin-bottom:12px;">Free</span>
+        <a href="https://www.cdc.gov/ncbddd/actearly/milestones/index.html" target="_blank" rel="noopener" class="btn btn-outline">Visit Resource →</a>
+      </div>
+      <div class="resource-card">
+        <div class="resource-card-icon">🔢</div>
+        <h4>ASHA Speech Sound Norms</h4>
+        <p>Quick reference for speech sound development norms to guide assessment interpretation and treatment planning.</p>
+        <span class="badge badge-free" style="margin-bottom:12px;">Free</span>
+        <a href="https://www.asha.org/public/speech/development/speech-and-language-development-faqs/" target="_blank" rel="noopener" class="btn btn-outline">Visit Resource →</a>
+      </div>
+      <div class="resource-card">
+        <div class="resource-card-icon">🎯</div>
+        <h4>ASHA Goal Writing Resources</h4>
+        <p>Clinical resources and frameworks for writing measurable, functional speech-language goals aligned with best practice.</p>
+        <span class="badge badge-free" style="margin-bottom:12px;">Free</span>
+        <a href="https://www.asha.org/practice/reimbursement/medicaid/goal_writing/" target="_blank" rel="noopener" class="btn btn-outline">Visit Resource →</a>
+      </div>
+      <div class="resource-card">
+        <div class="resource-card-icon">🏥</div>
+        <h4>HIPAA Training for Healthcare Staff</h4>
+        <p>Free online HIPAA training covering privacy rules, security requirements, and compliance for healthcare professionals.</p>
+        <span class="badge badge-free" style="margin-bottom:12px;">Free</span>
+        <a href="https://www.hhs.gov/hipaa/for-professionals/privacy/training/index.html" target="_blank" rel="noopener" class="btn btn-outline">Visit Resource →</a>
+      </div>
+      <div class="resource-card">
+        <div class="resource-card-icon">📋</div>
+        <h4>Gillam &amp; Pearson — Screening Tools</h4>
+        <p>Overview of commonly used standardized screening tools for speech-language pathology in pediatric settings.</p>
+        <span class="badge badge-free" style="margin-bottom:12px;">Free</span>
+        <a href="https://www.asha.org/practice-portal/clinical-topics/late-language-emergence/tools-and-technologies-for-screening/" target="_blank" rel="noopener" class="btn btn-outline">Visit Resource →</a>
+      </div>
+      <div class="resource-card">
+        <div class="resource-card-icon">🌐</div>
+        <h4>PediaStaff — Clinical Resources</h4>
+        <p>Free pediatric therapy resources, research articles, and clinical tools curated for pediatric SLPs and therapy teams.</p>
+        <span class="badge badge-free" style="margin-bottom:12px;">Free</span>
+        <a href="https://pediastaff.com/resources/" target="_blank" rel="noopener" class="btn btn-outline">Visit Resource →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARENT HUB -->
+<section class="section" style="background:linear-gradient(180deg, var(--off-white) 0%, #fff 100%);" id="parent-hub">
+  <div class="container">
+    <div class="category-header">
+      <span class="category-icon-lg">👨‍👩‍👧</span>
+      <div>
+        <h3>Parent Resource Hub</h3>
+        <p>Shareable materials for families — carryover activities, guides, and milestone checklists</p>
+      </div>
+    </div>
+    <div style="background:linear-gradient(135deg, var(--sage) 0%, var(--sage-dark) 100%);border-radius:var(--radius);padding:32px;margin-bottom:32px;color:#fff;">
+      <h4 style="color:#fff;font-family:'Poppins',sans-serif;margin-bottom:8px;">📤 How to Share These With Families</h4>
+      <p style="color:rgba(255,255,255,0.9);margin:0;font-size:15px;">These resources are curated for families to use at home. Share the direct link for any resource with parents during or after sessions to support carryover and home practice. All resources listed here are free and publicly accessible.</p>
+    </div>
+    <div class="grid-3">
+      <div class="resource-card">
+        <div class="resource-card-icon">🗣️</div>
+        <h4>ASHA — Speech Delay Basics for Parents</h4>
+        <p>Simple, parent-friendly explanations of speech and language delays — great for initial parent education conversations.</p>
+        <span class="badge badge-free" style="margin-bottom:12px;">Free</span>
+        <a href="https://www.asha.org/public/speech/development/your-child-hearing-and-communicating/" target="_blank" rel="noopener" class="btn btn-sage">Share with Family →</a>
+      </div>
+      <div class="resource-card">
+        <div class="resource-card-icon">📅</div>
+        <h4>CDC Milestone Checklist</h4>
+        <p>Printable milestone checklists parents can use to track their child's communication development at home.</p>
+        <span class="badge badge-free" style="margin-bottom:12px;">Free · Printable</span>
+        <a href="https://www.cdc.gov/ncbddd/actearly/pdf/checklists/Checklists-with-Tips_Reader_508.pdf" target="_blank" rel="noopener" class="btn btn-sage">Share with Family →</a>
+      </div>
+      <div class="resource-card">
+        <div class="resource-card-icon">🏠</div>
+        <h4>Articulation Practice at Home</h4>
+        <p>ASHA parent guide with simple activities families can use at home to support articulation development.</p>
+        <span class="badge badge-free" style="margin-bottom:12px;">Free</span>
+        <a href="https://www.asha.org/public/speech/disorders/speech-sound-disorders-articulation-and-phonology/" target="_blank" rel="noopener" class="btn btn-sage">Share with Family →</a>
+      </div>
+      <div class="resource-card">
+        <div class="resource-card-icon">📖</div>
+        <h4>Language Development Activities</h4>
+        <p>Zero to Three's research-based language development activities for parents of infants, toddlers, and preschoolers.</p>
+        <span class="badge badge-free" style="margin-bottom:12px;">Free</span>
+        <a href="https://www.zerotothree.org/early-development/talking-and-communication/" target="_blank" rel="noopener" class="btn btn-sage">Share with Family →</a>
+      </div>
+      <div class="resource-card">
+        <div class="resource-card-icon">🗨️</div>
+        <h4>AAC Support for Families</h4>
+        <p>Praactical AAC's family-friendly resources on supporting AAC users at home including modeling strategies.</p>
+        <span class="badge badge-free" style="margin-bottom:12px;">Free</span>
+        <a href="https://www.praacticalaac.org/category/families/" target="_blank" rel="noopener" class="btn btn-sage">Share with Family →</a>
+      </div>
+      <div class="resource-card">
+        <div class="resource-card-icon">🌈</div>
+        <h4>Understood.org — Neurodiversity for Families</h4>
+        <p>Comprehensive, free resource helping families understand learning differences, neurodiversity, and communication challenges.</p>
+        <span class="badge badge-free" style="margin-bottom:12px;">Free</span>
+        <a href="https://www.understood.org/" target="_blank" rel="noopener" class="btn btn-sage">Share with Family →</a>
+      </div>
+      <div class="resource-card">
+        <div class="resource-card-icon">🌎</div>
+        <h4>Bilingual Speech Development</h4>
+        <p>ASHA's parent resource on bilingualism and speech-language development — addresses common myths for multilingual families.</p>
+        <span class="badge badge-free" style="margin-bottom:12px;">Free</span>
+        <a href="https://www.asha.org/public/speech/development/bilingualism/" target="_blank" rel="noopener" class="btn btn-sage">Share with Family →</a>
+      </div>
+      <div class="resource-card">
+        <div class="resource-card-icon">🧩</div>
+        <h4>Social Skills at Home</h4>
+        <p>Practical strategies and activities families can use to support social skill development in everyday situations.</p>
+        <span class="badge badge-free" style="margin-bottom:12px;">Free</span>
+        <a href="https://www.understood.org/articles/social-skills-activities-for-kids" target="_blank" rel="noopener" class="btn btn-sage">Share with Family →</a>
+      </div>
+      <div class="resource-card">
+        <div class="resource-card-icon">🎥</div>
+        <h4>SLP Advice — YouTube</h4>
+        <p>Evidence-based YouTube channel for families with practical tips and demonstrations for supporting speech at home.</p>
+        <span class="badge badge-free" style="margin-bottom:12px;">Free · Video</span>
+        <a href="https://www.youtube.com/@SLPAdvice" target="_blank" rel="noopener" class="btn btn-sage">Share with Family →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-logo">THRIVE Speech Therapy</div>
+  <p style="color:rgba(255,255,255,0.6);font-size:13px;">Internal Staff Portal</p>
+  <div class="footer-restricted">🔒 Authorized Thrive Team Members Only</div>
+  <p class="footer-legal">© 2026 Thrive Speech Therapy, PLLC. All rights reserved. All content, materials, policies, and resources contained within this portal are the confidential and proprietary property of Thrive Speech Therapy, PLLC and may not be reproduced, distributed, or disclosed without express written permission. This portal may contain personal health information protected under HIPAA and applicable federal and state privacy laws.</p>
+  <p class="footer-legal">If you have accessed this page in error, please exit immediately and contact <a href="mailto:admin@thrivespeech.net" style="color:var(--lavender);">admin@thrivespeech.net</a>.</p>
+  <p class="footer-heart">Thank you for being part of the Thrive family. Together, we help every child find their voice. 💜</p>
+</footer>
+
+<script>
+const searchData = [
+  { title: 'Employee Handbook', desc: 'Company handbook, policies, benefits', keywords: ['handbook', 'employee', 'policies', 'guide'], url: 'https://drive.google.com/drive/folders/1GeAD5p06gsxH83w0ncOl055G136pxZEt?dmr=1', icon: '📘' },
+  { title: 'ASHA Articulation Resources', desc: 'Evidence-based articulation and phonology resources', keywords: ['articulation', 'phonology', 'speech sounds', 'asha'], url: 'https://www.asha.org/practice-portal/clinical-topics/articulation-and-phonology/', icon: '🔤' },
+  { title: 'AAC Institute', desc: 'Augmentative and alternative communication resources', keywords: ['aac', 'augmentative', 'alternative communication', 'device', 'pecs'], url: 'https://www.aacinstitute.org/', icon: '🧩' },
+  { title: 'CDC Milestone Tracker', desc: 'Developmental milestone checklists for children', keywords: ['milestones', 'development', 'cdc', 'checklist', 'age', 'typical'], url: 'https://www.cdc.gov/ncbddd/actearly/milestones/index.html', icon: '📏' },
+  { title: 'ASHA Learning Center CEUs', desc: 'Free and paid CEU courses from ASHA', keywords: ['ceu', 'continuing education', 'courses', 'asha', 'learning', 'credits'], url: 'https://www.asha.org/learning-center/', icon: '🏛️' },
+  { title: 'HIPAA Training', desc: 'Free online HIPAA compliance training', keywords: ['hipaa', 'privacy', 'compliance', 'training', 'security', 'health information'], url: 'https://www.hhs.gov/hipaa/for-professionals/privacy/training/index.html', icon: '🏥' },
+  { title: 'Social Thinking', desc: 'Social communication and pragmatic language resources', keywords: ['social', 'pragmatic', 'social skills', 'thinking', 'communication'], url: 'https://www.socialthinking.com/free-articles', icon: '👥' },
+  { title: 'Bilingual SLP Resources', desc: 'Resources for serving bilingual and multilingual children', keywords: ['bilingual', 'multilingual', 'spanish', 'language', 'esl', 'dual'], url: 'https://www.asha.org/practice-portal/professional-issues/bilingual-service-delivery/', icon: '🌎' },
+  { title: 'SLP Nerdcast CEUs', desc: 'Free podcast episodes with ASHA CEU credits', keywords: ['podcast', 'nerdcast', 'ceu', 'free', 'audio', 'learn'], url: 'https://www.slpnerdcast.com/', icon: '📺' },
+  { title: 'Neurodiversity-Affirming Resources', desc: 'ASHA resources on neuro-affirming practice for SLPs', keywords: ['neuro', 'affirming', 'neurodiversity', 'autism', 'autistic', 'adhd'], url: 'https://www.asha.org/practice-portal/professional-issues/autism/', icon: '🧠' },
+  { title: 'Goal Writing Resources', desc: 'Frameworks for writing measurable speech-language goals', keywords: ['goals', 'goal writing', 'iep', 'objectives', 'measurable', 'smart'], url: 'https://www.asha.org/practice/reimbursement/medicaid/goal_writing/', icon: '🎯' },
+  { title: 'Understood.org', desc: 'Resources for families on neurodiversity and learning differences', keywords: ['understood', 'family', 'parent', 'learning', 'difference', 'neurodiversity'], url: 'https://www.understood.org/', icon: '🌈' },
+  { title: 'Zero to Three — Language Activities', desc: 'Language development activities for parents of young children', keywords: ['parent', 'family', 'home', 'activities', 'language', 'toddler', 'infant'], url: 'https://www.zerotothree.org/early-development/talking-and-communication/', icon: '📖' },
+];
+
+function runSearch(query) {
+  const results = document.getElementById('searchResults');
+  if (!query || query.length < 2) { results.classList.remove('show'); return; }
+  const q = query.toLowerCase();
+  const matches = searchData.filter(item =>
+    item.title.toLowerCase().includes(q) ||
+    item.desc.toLowerCase().includes(q) ||
+    item.keywords.some(k => k.toLowerCase().includes(q))
+  ).slice(0, 6);
+  if (matches.length === 0) {
+    results.innerHTML = `<div class="search-no-results">No results for "<strong>${query}</strong>". Try different keywords or browse the sections above.<br><br><a href="mailto:admin@thrivespeech.net" style="color:var(--mauve);">Contact admin@thrivespeech.net for help</a></div>`;
+  } else {
+    results.innerHTML = matches.map(m => `
+      <a href="${m.url}" target="_blank" rel="noopener" class="search-result-item" style="text-decoration:none;">
+        <span class="search-result-icon">${m.icon}</span>
+        <div><div class="search-result-title">${m.title}</div><div class="search-result-desc">${m.desc}</div></div>
+      </a>`).join('');
+  }
+  results.classList.add('show');
+}
+document.addEventListener('click', e => {
+  if (!e.target.closest('.search-wrap')) document.getElementById('searchResults').classList.remove('show');
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home — Thrive Speech Therapy Internal Portal</title>
+<link rel="stylesheet" href="assets/styles.css">
+<style>
+  /* Page-specific styles */
+  .quick-link-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 24px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    text-decoration: none;
+    transition: all 0.25s;
+    color: var(--dark);
+  }
+  .quick-link-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--lavender);
+    color: var(--dark);
+  }
+  .quick-link-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    flex-shrink: 0;
+    background: var(--lilac);
+  }
+  .quick-link-text strong {
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 2px;
+  }
+  .quick-link-text span {
+    font-size: 12px;
+    color: var(--text-muted);
+  }
+  .quick-link-arrow {
+    margin-left: auto;
+    color: var(--lavender);
+    font-size: 18px;
+  }
+  .portal-nav-card {
+    display: block;
+    text-decoration: none;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 32px 28px;
+    transition: all 0.25s;
+    position: relative;
+    overflow: hidden;
+  }
+  .portal-nav-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(to right, var(--mauve), var(--lavender));
+    transform: scaleX(0);
+    transition: transform 0.25s;
+  }
+  .portal-nav-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); border-color: var(--lavender); }
+  .portal-nav-card:hover::after { transform: scaleX(1); }
+  .portal-nav-icon { font-size: 36px; margin-bottom: 16px; display: block; }
+  .portal-nav-card h4 { color: var(--dark); font-family: 'Poppins', sans-serif; font-size: 17px; margin-bottom: 8px; }
+  .portal-nav-card p { font-size: 13px; color: var(--text-muted); margin: 0; }
+  .stat-block { text-align: center; }
+  .stat-number { font-family: 'Poppins', sans-serif; font-size: 48px; font-weight: 800; color: var(--mauve); line-height: 1; }
+  .stat-label { font-size: 14px; color: var(--text-muted); margin-top: 8px; }
+  .contact-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .contact-row:last-child { border-bottom: none; }
+  .contact-icon { font-size: 20px; width: 36px; text-align: center; flex-shrink: 0; }
+  .contact-info strong { display: block; font-size: 13px; font-weight: 600; color: var(--dark); }
+  .contact-info a, .contact-info span { font-size: 14px; color: var(--mauve); }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-badge">Internal Staff Portal</div>
+  <h1>Welcome, <span class="hero-accent">Thrivers!</span><br>You belong here.</h1>
+  <p>Everything you need — policies, tools, resources, and all things Thrive — in one beautifully organized place. You are part of something truly special.</p>
+  <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;position:relative;z-index:1;">
+    <a href="https://sites.google.com/thrivespeech.net/thriveinternal/staff-client-policies?authuser=0" class="btn btn-primary btn-lg">📋 Staff & Client Policies</a>
+    <a href="https://sites.google.com/thrivespeech.net/thriveinternal/resources?authuser=0" class="btn btn-secondary btn-lg">📚 Browse Resources</a>
+  </div>
+</section>
+
+<!-- LEADERSHIP MESSAGE -->
+<section class="section bg-off-white">
+  <div class="container">
+    <div class="leadership-card">
+      <span class="section-label" style="color:var(--lavender);">A Note from Leadership</span>
+      <p class="leadership-quote">
+        "Every single day, our team shows up with heart, expertise, and an unwavering commitment to the children and families who trust us. This portal was built for <em>you</em> — to make your work a little easier, your answers a little faster, and your connection to our mission a little stronger. We are proud to have you on this journey with us. You are not just an employee; you are a Thriver, and that means everything."
+      </p>
+      <p class="leadership-sig">— Jessica Sekhon, Founder & CEO | Davinder Sekhon, COO<br><span style="font-size:13px;color:rgba(255,255,255,0.6);font-weight:400;">Thrive Speech Therapy, PLLC</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT WE STAND FOR -->
+<section class="section bg-white">
+  <div class="container">
+    <span class="section-label">Our Foundation</span>
+    <h2 class="section-title">What We Stand For</h2>
+    <div class="divider"></div>
+    <div class="grid-3" style="margin-top:40px;">
+      <div class="card" style="border-top:4px solid var(--mauve);">
+        <span class="card-icon">💜</span>
+        <h4>Every Child Deserves a Voice</h4>
+        <p>We are committed to empowering each child's unique communication journey with compassion, expertise, and evidence-based care.</p>
+      </div>
+      <div class="card" style="border-top:4px solid var(--sage);">
+        <span class="card-icon">🧠</span>
+        <h4>Neuro-Affirming Practice</h4>
+        <p>We honor neurodiversity in every session, embracing each child's way of thinking, communicating, and experiencing the world.</p>
+      </div>
+      <div class="card" style="border-top:4px solid var(--lavender);">
+        <span class="card-icon">🤝</span>
+        <h4>Family as Partners</h4>
+        <p>Families are the most important members of our team. We build trust, transparency, and lasting relationships with every family we serve.</p>
+      </div>
+      <div class="card" style="border-top:4px solid var(--mauve);">
+        <span class="card-icon">⭐</span>
+        <h4>Excellence Without Exception</h4>
+        <p>We hold ourselves to the highest clinical standards because every child deserves exceptional care, every single session.</p>
+      </div>
+      <div class="card" style="border-top:4px solid var(--sage);">
+        <span class="card-icon">🌱</span>
+        <h4>Growth for All</h4>
+        <p>We invest in our team's professional development because when our clinicians grow, our clients thrive alongside them.</p>
+      </div>
+      <div class="card" style="border-top:4px solid var(--lavender);">
+        <span class="card-icon">🏥</span>
+        <h4>Community Rooted</h4>
+        <p>Houston's families trust us with their most precious gift — their children. We take that trust seriously every day across all 9 clinics.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTAL NAVIGATION -->
+<section class="section bg-off-white">
+  <div class="container">
+    <span class="section-label">Navigate the Portal</span>
+    <h2 class="section-title">Everything in One Place</h2>
+    <div class="divider"></div>
+    <p class="section-subtitle" style="margin-bottom:40px;">All your essential resources, policies, and tools — organized and always within reach.</p>
+    <div class="grid-3">
+      <a href="https://sites.google.com/thrivespeech.net/thriveinternal/our-mission?authuser=0" class="portal-nav-card">
+        <span class="portal-nav-icon">🌟</span>
+        <h4>Our Mission</h4>
+        <p>Our purpose, core values, and the principles that guide everything we do at Thrive.</p>
+      </a>
+      <a href="https://sites.google.com/thrivespeech.net/thriveinternal/staff-client-policies?authuser=0" class="portal-nav-card">
+        <span class="portal-nav-icon">📋</span>
+        <h4>Staff & Client Policies</h4>
+        <p>Employment documents, client policies, Workers' Comp, attendance, and billing guidelines.</p>
+      </a>
+      <a href="https://sites.google.com/thrivespeech.net/thriveinternal/slp-policies-procedures?authuser=0" class="portal-nav-card">
+        <span class="portal-nav-icon">🩺</span>
+        <h4>SLP Policies & Procedures</h4>
+        <p>Clinical procedures, PTO policy, workplace guidelines, and professional standards for our SLP team.</p>
+      </a>
+      <a href="https://sites.google.com/thrivespeech.net/thriveinternal/resources?authuser=0" class="portal-nav-card">
+        <span class="portal-nav-icon">📚</span>
+        <h4>Resources</h4>
+        <p>Clinical tools, CEUs, free therapy materials, AAC resources, and professional development.</p>
+      </a>
+      <a href="https://sites.google.com/thrivespeech.net/thriveinternal/parent-resources?authuser=0" class="portal-nav-card">
+        <span class="portal-nav-icon">👨‍👩‍👧</span>
+        <h4>Parent Resources</h4>
+        <p>Shareable family guides, home carryover activities, milestone checklists, and support materials.</p>
+      </a>
+      <a href="https://thrivespeech.net" target="_blank" rel="noopener" class="portal-nav-card">
+        <span class="portal-nav-icon">🌐</span>
+        <h4>Visit Our Website</h4>
+        <p>Thrivespeech.net — our public-facing website for clients, families, and referral partners.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- QUICK ACCESS -->
+<section class="section bg-white">
+  <div class="container">
+    <div class="grid-2" style="gap:48px;align-items:start;">
+      <!-- Tools -->
+      <div>
+        <span class="section-label">Essential Tools</span>
+        <h3 class="section-title" style="margin-bottom:24px;">Quick Access</h3>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <a href="https://www.simplepractice.com" target="_blank" rel="noopener" class="quick-link-card">
+            <div class="quick-link-icon">📊</div>
+            <div class="quick-link-text">
+              <strong>SimplePractice</strong>
+              <span>Session management & scheduling</span>
+            </div>
+            <span class="quick-link-arrow">→</span>
+          </a>
+          <a href="https://app.gusto.com" target="_blank" rel="noopener" class="quick-link-card">
+            <div class="quick-link-icon">💼</div>
+            <div class="quick-link-text">
+              <strong>Gusto</strong>
+              <span>Payroll, benefits & HR</span>
+            </div>
+            <span class="quick-link-arrow">→</span>
+          </a>
+          <a href="https://thrivespeech.net" target="_blank" rel="noopener" class="quick-link-card">
+            <div class="quick-link-icon">📍</div>
+            <div class="quick-link-text">
+              <strong>Thrive Locations</strong>
+              <span>Find a clinic near you</span>
+            </div>
+            <span class="quick-link-arrow">→</span>
+          </a>
+          <a href="https://drive.google.com/file/d/1tKzsgYchAd0-BzuVWMcKkD8MczeORkRg/view?usp=drive_link" target="_blank" rel="noopener" class="quick-link-card">
+            <div class="quick-link-icon">📸</div>
+            <div class="quick-link-text">
+              <strong>Photo Release Form</strong>
+              <span>Client photography consent</span>
+            </div>
+            <span class="quick-link-arrow">→</span>
+          </a>
+        </div>
+      </div>
+      <!-- Contacts -->
+      <div>
+        <span class="section-label">Always Here for You</span>
+        <h3 class="section-title" style="margin-bottom:24px;">Key Contacts</h3>
+        <div style="background:var(--off-white);border-radius:var(--radius);padding:28px;">
+          <div class="contact-row">
+            <span class="contact-icon">📞</span>
+            <div class="contact-info">
+              <strong>Main Office</strong>
+              <a href="tel:+12819821313">(281) 982-1313</a>
+            </div>
+          </div>
+          <div class="contact-row">
+            <span class="contact-icon">📠</span>
+            <div class="contact-info">
+              <strong>Fax</strong>
+              <span>346-299-5172</span>
+            </div>
+          </div>
+          <div class="contact-row">
+            <span class="contact-icon">✉️</span>
+            <div class="contact-info">
+              <strong>Admin Email</strong>
+              <a href="mailto:admin@thrivespeech.net">admin@thrivespeech.net</a>
+            </div>
+          </div>
+          <div class="contact-row">
+            <span class="contact-icon">🌐</span>
+            <div class="contact-info">
+              <strong>Website</strong>
+              <a href="https://thrivespeech.net" target="_blank" rel="noopener">thrivespeech.net</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="section-sm bg-mauve" style="padding:60px 0;">
+  <div class="container">
+    <div class="grid-4" style="text-align:center;">
+      <div class="stat-block">
+        <div class="stat-number" style="color:#fff;">9</div>
+        <div class="stat-label" style="color:rgba(255,255,255,0.7);">Clinic Locations</div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-number" style="color:var(--lavender);">Houston</div>
+        <div class="stat-label" style="color:rgba(255,255,255,0.7);">Greater Houston Area</div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-number" style="color:#fff;">2017</div>
+        <div class="stat-label" style="color:rgba(255,255,255,0.7);">Founded by Jessica Sekhon</div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-number" style="color:var(--lavender);">💜</div>
+        <div class="stat-label" style="color:rgba(255,255,255,0.7);">Every Child Thrives Here</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-logo">THRIVE Speech Therapy</div>
+  <p style="color:rgba(255,255,255,0.6);font-size:13px;">Internal Staff Portal</p>
+  <div class="footer-restricted">🔒 Authorized Thrive Team Members Only</div>
+  <p class="footer-legal">
+    © 2026 Thrive Speech Therapy, PLLC. All rights reserved. All content, materials, policies, and resources contained within this portal are the confidential and proprietary property of Thrive Speech Therapy, PLLC and may not be reproduced, distributed, or disclosed without express written permission. This portal may contain personal health information and confidential business information protected under HIPAA and applicable federal and state privacy laws.
+  </p>
+  <p class="footer-legal">
+    Unauthorized access, sharing, or distribution of any content found within this portal is strictly prohibited. If you have accessed this page in error, please exit immediately and contact <a href="mailto:admin@thrivespeech.net" style="color:var(--lavender);">admin@thrivespeech.net</a>.
+  </p>
+  <p class="footer-heart">Thank you for being part of the Thrive family. Together, we help every child find their voice. 💜</p>
+</footer>
+
+</body>
+</html>

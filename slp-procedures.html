@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SLP Policies & Procedures — Thrive Speech Therapy Internal Portal</title>
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-badge">For Our SLP Team</div>
+  <h1>SLP Policies &amp; Procedures</h1>
+  <p>This space was built with you in mind. These guidelines empower you to show up confidently, care deeply, and thrive alongside every family you serve.</p>
+</section>
+
+<!-- SEARCH -->
+<section class="section-sm bg-off-white" style="padding:40px 0;">
+  <div class="container">
+    <p style="text-align:center;font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted);margin-bottom:16px;">Search SLP Policies</p>
+    <div class="search-wrap">
+      <input type="text" class="search-input" id="slpSearch" placeholder="Search policies... e.g. PTO, work from home, conflict resolution" oninput="runSearch(this.value)">
+      <span class="search-icon">🔍</span>
+      <div class="search-results" id="searchResults"></div>
+    </div>
+  </div>
+</section>
+
+<!-- SLP POLICY DOCUMENTS -->
+<section class="section bg-white">
+  <div class="container">
+    <span class="section-label">SLP Policy Library</span>
+    <h2 class="section-title">Your Policy Documents</h2>
+    <div class="divider"></div>
+    <p class="section-subtitle" style="margin-bottom:40px;">All policies have been crafted to support you as a clinician and protect the children and families in your care. Please review each document and reach out with any questions.</p>
+
+    <div class="tabs">
+      <div class="tab-nav">
+        <button class="tab-btn active" onclick="switchTab('pto', this)">🌴 PTO Policy</button>
+        <button class="tab-btn" onclick="switchTab('wfh', this)">🏠 Work from Home</button>
+        <button class="tab-btn" onclick="switchTab('conflict', this)">🤝 Conflict Resolution</button>
+      </div>
+
+      <!-- PTO TAB -->
+      <div class="tab-panel active" id="tab-pto">
+        <div style="background:var(--off-white);border-radius:var(--radius);padding:36px;margin-bottom:28px;">
+          <h3 style="color:var(--dark);margin-bottom:12px;">Paid Time Off (PTO) Policy</h3>
+          <p style="margin-bottom:20px;">Thrive Speech Therapy provides a PTO benefit to help all employees maintain a healthy work-life balance. This policy outlines how PTO is accrued, requested, and managed — giving you the flexibility to use your time for vacation, illness, appointments, and personal needs.</p>
+          <h4 style="color:var(--dark);margin-bottom:12px;">Key Highlights</h4>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:24px;">
+            <li style="display:flex;gap:10px;align-items:flex-start;"><span style="color:var(--sage);font-weight:700;flex-shrink:0;">✓</span><span style="color:var(--text-muted);font-size:15px;">PTO accrues each pay period and can be used for vacation, illness, personal business, medical appointments, and emergencies.</span></li>
+            <li style="display:flex;gap:10px;align-items:flex-start;"><span style="color:var(--sage);font-weight:700;flex-shrink:0;">✓</span><span style="color:var(--text-muted);font-size:15px;">All PTO requests must be submitted through Gusto and approved before time off is taken.</span></li>
+            <li style="display:flex;gap:10px;align-items:flex-start;"><span style="color:var(--sage);font-weight:700;flex-shrink:0;">✓</span><span style="color:var(--text-muted);font-size:15px;">Carry-over is capped at 24 hours year-over-year.</span></li>
+            <li style="display:flex;gap:10px;align-items:flex-start;"><span style="color:var(--sage);font-weight:700;flex-shrink:0;">✓</span><span style="color:var(--text-muted);font-size:15px;">Unused PTO is not paid out upon resignation, termination, or end of employment.</span></li>
+            <li style="display:flex;gap:10px;align-items:flex-start;"><span style="color:var(--sage);font-weight:700;flex-shrink:0;">✓</span><span style="color:var(--text-muted);font-size:15px;">PTO requests should be submitted at least 2 weeks in advance for planned absences when possible.</span></li>
+          </ul>
+          <a href="https://drive.google.com/drive/folders/1HLfivAujLUxELn_w-w87xyZ5jMWeUrk1?usp=drive_link" target="_blank" rel="noopener" class="btn btn-primary">📄 View Full PTO Policy →</a>
+        </div>
+      </div>
+
+      <!-- WORK FROM HOME TAB -->
+      <div class="tab-panel" id="tab-wfh">
+        <div style="background:var(--off-white);border-radius:var(--radius);padding:36px;margin-bottom:28px;">
+          <h3 style="color:var(--dark);margin-bottom:12px;">Work from Home Policy</h3>
+          <p style="margin-bottom:20px;">Thrive's Work from Home policy outlines the conditions under which remote work may be approved for eligible staff members. This policy is designed to maintain clinical quality while supporting flexibility for our team when operationally feasible.</p>
+          <h4 style="color:var(--dark);margin-bottom:12px;">Key Highlights</h4>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:24px;">
+            <li style="display:flex;gap:10px;align-items:flex-start;"><span style="color:var(--sage);font-weight:700;flex-shrink:0;">✓</span><span style="color:var(--text-muted);font-size:15px;">Remote work arrangements must be pre-approved by clinic leadership and are not guaranteed for all positions or situations.</span></li>
+            <li style="display:flex;gap:10px;align-items:flex-start;"><span style="color:var(--sage);font-weight:700;flex-shrink:0;">✓</span><span style="color:var(--text-muted);font-size:15px;">Teletherapy sessions must comply with all HIPAA requirements including secure platforms and private environments.</span></li>
+            <li style="display:flex;gap:10px;align-items:flex-start;"><span style="color:var(--sage);font-weight:700;flex-shrink:0;">✓</span><span style="color:var(--text-muted);font-size:15px;">Clinicians working remotely must maintain the same professionalism, responsiveness, and clinical quality as in-clinic sessions.</span></li>
+            <li style="display:flex;gap:10px;align-items:flex-start;"><span style="color:var(--sage);font-weight:700;flex-shrink:0;">✓</span><span style="color:var(--text-muted);font-size:15px;">All documentation must be completed within the required timeframes regardless of work location.</span></li>
+          </ul>
+          <a href="https://drive.google.com/drive/folders/1HLfivAujLUxELn_w-w87xyZ5jMWeUrk1?usp=drive_link" target="_blank" rel="noopener" class="btn btn-primary">📄 View Full WFH Policy →</a>
+        </div>
+      </div>
+
+      <!-- CONFLICT RESOLUTION TAB -->
+      <div class="tab-panel" id="tab-conflict">
+        <div style="background:var(--off-white);border-radius:var(--radius);padding:36px;margin-bottom:28px;">
+          <h3 style="color:var(--dark);margin-bottom:12px;">Conflict Resolution Policy</h3>
+          <p style="margin-bottom:20px;">At Thrive, we believe that a healthy, respectful workplace is the foundation of exceptional client care. Our Conflict Resolution Policy provides a clear, fair, and supportive process for addressing workplace disagreements in a way that honors everyone involved.</p>
+          <h4 style="color:var(--dark);margin-bottom:12px;">Our Approach</h4>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:24px;">
+            <li style="display:flex;gap:10px;align-items:flex-start;"><span style="color:var(--sage);font-weight:700;flex-shrink:0;">✓</span><span style="color:var(--text-muted);font-size:15px;">All team members are encouraged to address conflicts directly and respectfully with the other party first, when safe to do so.</span></li>
+            <li style="display:flex;gap:10px;align-items:flex-start;"><span style="color:var(--sage);font-weight:700;flex-shrink:0;">✓</span><span style="color:var(--text-muted);font-size:15px;">If direct resolution is not possible, concerns should be escalated to your clinic supervisor or HR.</span></li>
+            <li style="display:flex;gap:10px;align-items:flex-start;"><span style="color:var(--sage);font-weight:700;flex-shrink:0;">✓</span><span style="color:var(--text-muted);font-size:15px;">All conflict resolution discussions are treated with confidentiality and handled with care and professionalism.</span></li>
+            <li style="display:flex;gap:10px;align-items:flex-start;"><span style="color:var(--sage);font-weight:700;flex-shrink:0;">✓</span><span style="color:var(--text-muted);font-size:15px;">Retaliation of any kind against someone who raises a concern in good faith is not tolerated at Thrive.</span></li>
+          </ul>
+          <a href="https://drive.google.com/drive/folders/1HLfivAujLUxELn_w-w87xyZ5jMWeUrk1?usp=drive_link" target="_blank" rel="noopener" class="btn btn-primary">📄 View Full Conflict Resolution Policy →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ALL SLP DOCUMENTS -->
+<section class="section bg-off-white">
+  <div class="container">
+    <span class="section-label">Complete Document Library</span>
+    <h2 class="section-title">All SLP Policy Documents</h2>
+    <div class="divider"></div>
+    <p class="section-subtitle" style="margin-bottom:40px;">All documents available in PDF format. Click any document to open directly in Google Drive.</p>
+    <div class="grid-3">
+      <div style="background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:24px;transition:all 0.25s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 8px 32px rgba(104,91,114,0.22)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+        <div style="font-size:32px;margin-bottom:12px;">🌴</div>
+        <h4 style="color:var(--dark);font-family:'Poppins',sans-serif;margin-bottom:8px;">PTO Policy</h4>
+        <p style="font-size:13px;color:var(--text-muted);margin-bottom:16px;">Paid time off accrual, request process, and guidelines.</p>
+        <a href="https://drive.google.com/drive/folders/1HLfivAujLUxELn_w-w87xyZ5jMWeUrk1?usp=drive_link" target="_blank" rel="noopener" class="btn btn-outline btn-sm" style="width:100%;text-align:center;justify-content:center;">Open Document →</a>
+      </div>
+      <div style="background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:24px;transition:all 0.25s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 8px 32px rgba(104,91,114,0.22)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+        <div style="font-size:32px;margin-bottom:12px;">🏠</div>
+        <h4 style="color:var(--dark);font-family:'Poppins',sans-serif;margin-bottom:8px;">Work from Home Policy</h4>
+        <p style="font-size:13px;color:var(--text-muted);margin-bottom:16px;">Remote work eligibility, requirements, and expectations.</p>
+        <a href="https://drive.google.com/drive/folders/1HLfivAujLUxELn_w-w87xyZ5jMWeUrk1?usp=drive_link" target="_blank" rel="noopener" class="btn btn-outline btn-sm" style="width:100%;text-align:center;justify-content:center;">Open Document →</a>
+      </div>
+      <div style="background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:24px;transition:all 0.25s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 8px 32px rgba(104,91,114,0.22)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+        <div style="font-size:32px;margin-bottom:12px;">🤝</div>
+        <h4 style="color:var(--dark);font-family:'Poppins',sans-serif;margin-bottom:8px;">Conflict Resolution Policy</h4>
+        <p style="font-size:13px;color:var(--text-muted);margin-bottom:16px;">Fair, supportive process for resolving workplace concerns.</p>
+        <a href="https://drive.google.com/drive/folders/1HLfivAujLUxELn_w-w87xyZ5jMWeUrk1?usp=drive_link" target="_blank" rel="noopener" class="btn btn-outline btn-sm" style="width:100%;text-align:center;justify-content:center;">Open Document →</a>
+      </div>
+    </div>
+    <div style="margin-top:24px;text-align:center;">
+      <a href="https://drive.google.com/drive/folders/1HLfivAujLUxELn_w-w87xyZ5jMWeUrk1?usp=drive_link" target="_blank" rel="noopener" class="btn btn-primary">📁 View All SLP Documents in Google Drive →</a>
+    </div>
+  </div>
+</section>
+
+<!-- NEED HELP -->
+<section class="section-sm bg-mauve" style="padding:60px 0;text-align:center;">
+  <div class="container">
+    <h3 style="color:#fff;font-family:'Poppins',sans-serif;margin-bottom:12px;">Have a Question About a Policy?</h3>
+    <p style="color:rgba(255,255,255,0.8);margin-bottom:28px;max-width:500px;margin-left:auto;margin-right:auto;">Our leadership team is always here to provide clarity and support. Please do not hesitate to reach out.</p>
+    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+      <a href="mailto:admin@thrivespeech.net" class="btn btn-secondary">✉️ admin@thrivespeech.net</a>
+      <a href="tel:+12819821313" class="btn btn-secondary">📞 (281) 982-1313</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-logo">THRIVE Speech Therapy</div>
+  <p style="color:rgba(255,255,255,0.6);font-size:13px;">Internal Staff Portal</p>
+  <div class="footer-restricted">🔒 Authorized Thrive Team Members Only</div>
+  <p class="footer-legal">© 2026 Thrive Speech Therapy, PLLC. All rights reserved. All content, materials, policies, and resources contained within this portal are the confidential and proprietary property of Thrive Speech Therapy, PLLC and may not be reproduced, distributed, or disclosed without express written permission. This portal may contain personal health information protected under HIPAA and applicable federal and state privacy laws.</p>
+  <p class="footer-legal">If you have accessed this page in error, please exit immediately and contact <a href="mailto:admin@thrivespeech.net" style="color:var(--lavender);">admin@thrivespeech.net</a>.</p>
+  <p class="footer-heart">Thank you for being part of the Thrive family. Together, we help every child find their voice. 💜</p>
+</footer>
+
+<script>
+function switchTab(id, btn) {
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + id).classList.add('active');
+  btn.classList.add('active');
+}
+
+const searchData = [
+  { title: 'PTO Policy', desc: 'Paid time off accrual, requests, carry-over, and guidelines', keywords: ['pto', 'time off', 'vacation', 'sick', 'paid leave', 'days off', 'accrual', 'gusto'], url: 'https://drive.google.com/drive/folders/1HLfivAujLUxELn_w-w87xyZ5jMWeUrk1?usp=drive_link', icon: '🌴' },
+  { title: 'Work from Home Policy', desc: 'Remote work eligibility, teletherapy requirements, expectations', keywords: ['work from home', 'remote', 'wfh', 'teletherapy', 'telehealth', 'virtual', 'online'], url: 'https://drive.google.com/drive/folders/1HLfivAujLUxELn_w-w87xyZ5jMWeUrk1?usp=drive_link', icon: '🏠' },
+  { title: 'Conflict Resolution Policy', desc: 'Process for addressing workplace disagreements fairly', keywords: ['conflict', 'resolution', 'dispute', 'disagreement', 'complaint', 'workplace', 'hr'], url: 'https://drive.google.com/drive/folders/1HLfivAujLUxELn_w-w87xyZ5jMWeUrk1?usp=drive_link', icon: '🤝' },
+];
+
+function runSearch(query) {
+  const results = document.getElementById('searchResults');
+  if (!query || query.length < 2) { results.classList.remove('show'); return; }
+  const q = query.toLowerCase();
+  const matches = searchData.filter(item =>
+    item.title.toLowerCase().includes(q) ||
+    item.desc.toLowerCase().includes(q) ||
+    item.keywords.some(k => k.toLowerCase().includes(q))
+  ).slice(0, 6);
+  if (matches.length === 0) {
+    results.innerHTML = `<div class="search-no-results">No results for "<strong>${query}</strong>". Try different keywords or browse the tabs above.<br><br><a href="mailto:admin@thrivespeech.net" style="color:var(--mauve);">Contact admin@thrivespeech.net for help</a></div>`;
+  } else {
+    results.innerHTML = matches.map(m => `
+      <a href="${m.url}" target="_blank" rel="noopener" class="search-result-item" style="text-decoration:none;">
+        <span class="search-result-icon">${m.icon}</span>
+        <div><div class="search-result-title">${m.title}</div><div class="search-result-desc">${m.desc}</div></div>
+      </a>`).join('');
+  }
+  results.classList.add('show');
+}
+document.addEventListener('click', e => {
+  if (!e.target.closest('.search-wrap')) document.getElementById('searchResults').classList.remove('show');
+});
+</script>
+</body>
+</html>

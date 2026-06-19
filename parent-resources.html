@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Parent Resources — Thrive Speech Therapy Internal Portal</title>
+<link rel="stylesheet" href="assets/styles.css">
+<style>
+  .step-card {
+    text-align: center;
+    padding: 28px 20px;
+    background: var(--white);
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    transition: all 0.25s;
+    position: relative;
+  }
+  .step-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); }
+  .step-num-circle {
+    width: 48px; height: 48px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--mauve), var(--lavender));
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+  }
+  .step-card h4 { color: var(--dark); margin-bottom: 8px; font-size: 15px; }
+  .step-card p { font-size: 13px; margin: 0; }
+  .parent-resource-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px;
+    transition: all 0.25s;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .parent-resource-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); border-color: var(--lavender); }
+  .parent-resource-card .card-icon { font-size: 32px; margin-bottom: 14px; display: block; }
+  .parent-resource-card h4 { color: var(--dark); font-family: 'Poppins', sans-serif; font-size: 16px; margin-bottom: 8px; }
+  .parent-resource-card p { font-size: 14px; color: var(--text-muted); flex: 1; margin-bottom: 8px; }
+  .home-tip {
+    background: var(--off-white);
+    border-left: 3px solid var(--sage);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    padding: 10px 14px;
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-bottom: 16px;
+    font-style: italic;
+  }
+  .home-tip strong { color: var(--sage-dark); font-style: normal; }
+  .parent-resource-card .btn { width: 100%; text-align: center; justify-content: center; }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero" style="background:linear-gradient(135deg, var(--sage) 0%, #5a7a72 40%, var(--mauve) 100%);">
+  <div class="hero-badge">For Families</div>
+  <h1>You're in the Right Place.</h1>
+  <p>Everything here is curated with your family in mind — practical tools, clear explanations, and warm support to help you feel confident every step of your child's journey.</p>
+</section>
+
+<!-- WELCOME MESSAGE -->
+<section class="section-sm bg-off-white" style="padding:60px 0;">
+  <div class="container">
+    <div style="background:var(--white);border-radius:var(--radius);padding:40px;border:1px solid var(--border);max-width:800px;margin:0 auto;text-align:center;">
+      <span style="font-size:40px;display:block;margin-bottom:16px;">💜</span>
+      <span class="section-label" style="text-align:center;display:block;">Welcome, Families</span>
+      <h2 style="color:var(--dark);margin-bottom:16px;">We're So Glad Your Child Is Here</h2>
+      <p style="font-size:17px;max-width:600px;margin:0 auto;">Choosing a speech therapy clinic for your child is one of the most loving decisions a family can make. At Thrive, we believe every child deserves to be heard, understood, and celebrated. This page is your go-to hub of hand-picked resources — each one chosen to empower you as your child's greatest advocate and cheerleader.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT TO EXPECT -->
+<section class="section bg-white">
+  <div class="container">
+    <span class="section-label">Your Child's Journey</span>
+    <h2 class="section-title">What to Expect at Thrive</h2>
+    <div class="divider"></div>
+    <p class="section-subtitle" style="margin-bottom:48px;">Every child's path is beautifully unique. Here's a gentle overview of how we walk alongside your family.</p>
+    <div class="grid-4" style="gap:20px;">
+      <div class="step-card">
+        <div class="step-num-circle">1</div>
+        <h4>Intake & Welcome</h4>
+        <p>We learn about your child, your family, and your goals in a warm, no-pressure conversation.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num-circle">2</div>
+        <h4>Evaluation</h4>
+        <p>A thorough, child-friendly assessment to understand your child's strengths and support needs.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num-circle">3</div>
+        <h4>Personalized Plan</h4>
+        <p>We create an individualized therapy plan designed around your child — not a template.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num-circle">4</div>
+        <h4>Therapy & Progress</h4>
+        <p>Engaging, evidence-based sessions with regular updates so you always know how things are going.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num-circle">5</div>
+        <h4>Home Practice</h4>
+        <p>Simple strategies you can use at home to carry the magic of therapy into everyday moments.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPEECH DEVELOPMENT -->
+<section class="section bg-off-white">
+  <div class="container">
+    <span class="section-label">Understanding Your Child</span>
+    <h2 class="section-title">Speech &amp; Language Development</h2>
+    <div class="divider"></div>
+    <p class="section-subtitle" style="margin-bottom:40px;">These free resources help you understand what's typical, what to watch for, and how to support your child's communication at home.</p>
+    <div class="grid-3">
+      <div class="parent-resource-card">
+        <span class="card-icon">📅</span>
+        <h4>CDC Milestone Checklists</h4>
+        <p>Official developmental milestone checklists for children from 2 months to 5 years — available in printable format.</p>
+        <div class="home-tip"><strong>How to use at home:</strong> Review the checklist for your child's age and note any milestones you have questions about to discuss with your SLP.</div>
+        <a href="https://www.cdc.gov/ncbddd/actearly/pdf/checklists/Checklists-with-Tips_Reader_508.pdf" target="_blank" rel="noopener" class="btn btn-sage">Download Checklist →</a>
+      </div>
+      <div class="parent-resource-card">
+        <span class="card-icon">🗣️</span>
+        <h4>Speech & Language FAQs for Parents</h4>
+        <p>ASHA's parent-friendly answers to the most common questions about speech and language development in children.</p>
+        <div class="home-tip"><strong>How to use at home:</strong> Read through common questions and share this link with other caregivers or family members who want to understand your child's journey.</div>
+        <a href="https://www.asha.org/public/speech/development/speech-and-language-development-faqs/" target="_blank" rel="noopener" class="btn btn-sage">Visit Resource →</a>
+      </div>
+      <div class="parent-resource-card">
+        <span class="card-icon">📖</span>
+        <h4>Zero to Three — Language at Home</h4>
+        <p>Research-based language development activities for parents of infants, toddlers, and preschoolers to use in everyday moments.</p>
+        <div class="home-tip"><strong>How to use at home:</strong> Pick one activity per week and try it during bath time, meals, or car rides — consistency matters more than duration.</div>
+        <a href="https://www.zerotothree.org/early-development/talking-and-communication/" target="_blank" rel="noopener" class="btn btn-sage">Visit Resource →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOME PRACTICE -->
+<section class="section bg-white">
+  <div class="container">
+    <span class="section-label">Practice at Home</span>
+    <h2 class="section-title">Carryover Strategies for Families</h2>
+    <div class="divider"></div>
+    <p class="section-subtitle" style="margin-bottom:40px;">Therapy happens for a few hours each week, but your child's communication journey happens every moment of every day. These resources help you make the most of everyday interactions.</p>
+    <div class="grid-3">
+      <div class="parent-resource-card">
+        <span class="card-icon">🔤</span>
+        <h4>Articulation Practice at Home</h4>
+        <p>ASHA's parent guide with simple, playful activities to practice speech sounds at home between therapy sessions.</p>
+        <div class="home-tip"><strong>How to use at home:</strong> Ask your child's SLP which sounds to focus on, then use these activities during daily routines like brushing teeth or getting dressed.</div>
+        <a href="https://www.asha.org/public/speech/disorders/speech-sound-disorders-articulation-and-phonology/" target="_blank" rel="noopener" class="btn btn-outline">Visit Resource →</a>
+      </div>
+      <div class="parent-resource-card">
+        <span class="card-icon">🧩</span>
+        <h4>AAC Support for Families</h4>
+        <p>Praactical AAC's family guides on how to support your child's AAC use at home — including modeling strategies that really work.</p>
+        <div class="home-tip"><strong>How to use at home:</strong> Practice modeling language on your child's AAC device during play — you do not need to be an expert to make a big difference.</div>
+        <a href="https://www.praacticalaac.org/category/families/" target="_blank" rel="noopener" class="btn btn-outline">Visit Resource →</a>
+      </div>
+      <div class="parent-resource-card">
+        <span class="card-icon">🎥</span>
+        <h4>SLP Advice — Video Tips for Parents</h4>
+        <p>Evidence-based YouTube channel with practical, easy-to-follow video demonstrations for supporting speech and language at home.</p>
+        <div class="home-tip"><strong>How to use at home:</strong> Watch one short video per week with your child's other caregivers so everyone is using the same strategies consistently.</div>
+        <a href="https://www.youtube.com/@SLPAdvice" target="_blank" rel="noopener" class="btn btn-outline">Visit Resource →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEURODIVERSITY & SPECIAL NEEDS -->
+<section class="section bg-sage-soft">
+  <div class="container">
+    <span class="section-label">Embracing Every Child</span>
+    <h2 class="section-title">Neurodiversity &amp; Special Needs Support</h2>
+    <div class="divider" style="background:linear-gradient(to right, var(--sage), var(--lavender));"></div>
+    <p class="section-subtitle" style="margin-bottom:40px;">Every brain is wonderfully unique. These resources celebrate neurodiversity and help families understand and advocate for their children.</p>
+    <div class="grid-3">
+      <div class="parent-resource-card">
+        <span class="card-icon">🌈</span>
+        <h4>Understood.org</h4>
+        <p>A comprehensive, free resource helping families understand learning differences, neurodiversity, ADHD, dyslexia, and communication challenges in warm, accessible language.</p>
+        <div class="home-tip"><strong>How to use at home:</strong> Search for your child's specific area of challenge to find targeted articles, activities, and expert advice.</div>
+        <a href="https://www.understood.org/" target="_blank" rel="noopener" class="btn btn-sage">Visit Resource →</a>
+      </div>
+      <div class="parent-resource-card">
+        <span class="card-icon">🧠</span>
+        <h4>ASHA Autism Resources for Families</h4>
+        <p>Parent-friendly information on autism, communication, and how speech therapy supports autistic children in their unique communication journeys.</p>
+        <div class="home-tip"><strong>How to use at home:</strong> Share the "for families" sections with extended family members to help them understand and support your child better.</div>
+        <a href="https://www.asha.org/public/speech/disorders/autism/" target="_blank" rel="noopener" class="btn btn-sage">Visit Resource →</a>
+      </div>
+      <div class="parent-resource-card">
+        <span class="card-icon">🤝</span>
+        <h4>Social Skills Support at Home</h4>
+        <p>Practical strategies and activities families can use in everyday situations to support social skill development in a natural, playful way.</p>
+        <div class="home-tip"><strong>How to use at home:</strong> Try one activity per week during play dates, family dinners, or community outings to practice social skills in real-world settings.</div>
+        <a href="https://www.understood.org/articles/social-skills-activities-for-kids" target="_blank" rel="noopener" class="btn btn-sage">Visit Resource →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BILINGUAL FAMILIES -->
+<section class="section bg-white">
+  <div class="container">
+    <span class="section-label">For Multilingual Families</span>
+    <h2 class="section-title">Bilingual Speech Development</h2>
+    <div class="divider"></div>
+    <div class="grid-2" style="gap:48px;align-items:center;">
+      <div>
+        <p style="font-size:17px;margin-bottom:20px;">Being bilingual or multilingual is a <strong style="color:var(--mauve);">gift, not a barrier</strong>. Research clearly shows that learning two or more languages does not cause speech delays. At Thrive, we celebrate multilingual families and provide therapy that honors every language your child speaks.</p>
+        <p style="margin-bottom:28px;">The resources below are specifically for families raising bilingual or multilingual children — addressing common myths and providing practical guidance.</p>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <a href="https://www.asha.org/public/speech/development/bilingualism/" target="_blank" rel="noopener" class="btn btn-outline">🌎 ASHA — Bilingualism & Children →</a>
+          <a href="https://www.zerotothree.org/early-development/talking-and-communication/raising-a-bilingual-child/" target="_blank" rel="noopener" class="btn btn-outline">📖 Raising a Bilingual Child — Zero to Three →</a>
+        </div>
+      </div>
+      <div style="background:var(--lilac);border-radius:var(--radius);padding:36px;">
+        <h4 style="color:var(--dark);font-family:'Poppins',sans-serif;margin-bottom:20px;">💡 Common Myths About Bilingual Children</h4>
+        <div style="display:flex;flex-direction:column;gap:14px;">
+          <div style="display:flex;gap:12px;align-items:flex-start;">
+            <span style="color:#C62828;font-weight:700;flex-shrink:0;">✗</span>
+            <div><strong style="font-size:14px;color:var(--dark);">Myth:</strong> <span style="font-size:14px;color:var(--text-muted);">Speaking two languages confuses children and causes delays.</span></div>
+          </div>
+          <div style="display:flex;gap:12px;align-items:flex-start;">
+            <span style="color:var(--sage);font-weight:700;flex-shrink:0;">✓</span>
+            <div><strong style="font-size:14px;color:var(--dark);">Fact:</strong> <span style="font-size:14px;color:var(--text-muted);">Bilingual children develop at the same rate as monolingual children when all languages are counted together.</span></div>
+          </div>
+          <div style="height:1px;background:rgba(104,91,114,0.15);"></div>
+          <div style="display:flex;gap:12px;align-items:flex-start;">
+            <span style="color:#C62828;font-weight:700;flex-shrink:0;">✗</span>
+            <div><strong style="font-size:14px;color:var(--dark);">Myth:</strong> <span style="font-size:14px;color:var(--text-muted);">You should only speak one language at home if your child has a speech delay.</span></div>
+          </div>
+          <div style="display:flex;gap:12px;align-items:flex-start;">
+            <span style="color:var(--sage);font-weight:700;flex-shrink:0;">✓</span>
+            <div><strong style="font-size:14px;color:var(--dark);">Fact:</strong> <span style="font-size:14px;color:var(--text-muted);">Maintaining home languages is important for cultural identity and does not worsen speech delays.</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT & SUPPORT -->
+<section class="section-sm bg-mauve" style="padding:60px 0;text-align:center;">
+  <div class="container">
+    <h3 style="color:#fff;font-family:'Poppins',sans-serif;margin-bottom:12px;">We Are Always Here for Your Family</h3>
+    <p style="color:rgba(255,255,255,0.8);margin-bottom:28px;max-width:500px;margin-left:auto;margin-right:auto;">Have a question about your child's progress, a resource, or anything at all? Please reach out — we are honored to support your family's journey.</p>
+    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+      <a href="mailto:admin@thrivespeech.net" class="btn btn-secondary">✉️ admin@thrivespeech.net</a>
+      <a href="tel:+12819821313" class="btn btn-secondary">📞 (281) 982-1313</a>
+      <a href="https://thrivespeech.net" target="_blank" rel="noopener" class="btn btn-secondary">🌐 thrivespeech.net</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-logo">THRIVE Speech Therapy</div>
+  <p style="color:rgba(255,255,255,0.6);font-size:13px;">Internal Staff Portal</p>
+  <div class="footer-restricted">🔒 Authorized Thrive Team Members Only</div>
+  <p class="footer-legal">© 2026 Thrive Speech Therapy, PLLC. All rights reserved. All content, materials, policies, and resources contained within this portal are the confidential and proprietary property of Thrive Speech Therapy, PLLC and may not be reproduced, distributed, or disclosed without express written permission. This portal may contain personal health information protected under HIPAA and applicable federal and state privacy laws.</p>
+  <p class="footer-legal">If you have accessed this page in error, please exit immediately and contact <a href="mailto:admin@thrivespeech.net" style="color:var(--lavender);">admin@thrivespeech.net</a>.</p>
+  <p class="footer-heart">Thank you for being part of the Thrive family. Together, we help every child find their voice. 💜</p>
+</footer>
+
+</body>
+</html>
