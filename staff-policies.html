@@ -31,6 +31,95 @@
   .doc-info h4 { color: var(--dark); font-size: 15px; margin-bottom: 4px; }
   .doc-info p { font-size: 13px; color: var(--text-muted); margin-bottom: 12px; }
   .doc-meta { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .client-tab-nav {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+    border-bottom: 2px solid var(--border);
+    padding-bottom: 0;
+  }
+  .client-tab-btn {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 12px 24px;
+    border: none;
+    background: none;
+    color: var(--text-muted);
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -2px;
+    transition: all 0.2s;
+    border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+  }
+  .client-tab-btn:hover { color: var(--mauve); background: var(--off-white); }
+  .client-tab-btn.active { color: var(--mauve); border-bottom-color: var(--mauve); background: var(--off-white); }
+  .client-tab-panel { display: none; }
+  .client-tab-panel.active { display: block; }
+  .new-banner {
+    background: linear-gradient(135deg, #2E7D32, #388E3C);
+    color: #fff;
+    border-radius: var(--radius);
+    padding: 18px 24px;
+    margin-bottom: 32px;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+  }
+  .new-banner-icon { font-size: 22px; flex-shrink: 0; margin-top: 2px; }
+  .new-banner-text strong { font-family: 'Poppins', sans-serif; font-size: 15px; display: block; margin-bottom: 4px; }
+  .new-banner-text span { font-size: 13px; color: rgba(255,255,255,0.85); }
+  .send-table { width: 100%; border-collapse: collapse; margin-top: 16px; }
+  .send-table th {
+    background: var(--mauve);
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 12px 16px;
+    text-align: left;
+  }
+  .send-table td {
+    padding: 12px 16px;
+    font-size: 13px;
+    color: var(--text-muted);
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  .send-table tr:nth-child(even) td { background: var(--off-white); }
+  .send-table td:first-child { font-weight: 600; color: var(--dark); width: 44%; }
+  .doc-link { color: var(--mauve); text-decoration: none; font-weight: 600; }
+  .doc-link:hover { text-decoration: underline; }
+  .policy-rule {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--mauve);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+  }
+  .policy-rule h4 { font-family: 'Poppins', sans-serif; font-size: 14px; color: var(--mauve); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .policy-rule p, .policy-rule li { font-size: 14px; color: var(--text-muted); line-height: 1.65; margin: 0; }
+  .policy-rule ul { padding-left: 18px; margin-top: 6px; }
+  .policy-rule li { margin-bottom: 4px; }
+  .pill-diff { display: inline-flex; gap: 8px; flex-wrap: wrap; margin-top: 8px; }
+  .pill-comm { background: var(--lilac); color: var(--mauve); font-size: 12px; font-weight: 700; padding: 3px 10px; border-radius: 100px; }
+  .pill-mcd  { background: rgba(131,158,151,0.18); color: #3d6b62; font-size: 12px; font-weight: 700; padding: 3px 10px; border-radius: 100px; }
+  .when-needed-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 16px; margin-top: 24px; }
+  @media(max-width:640px){ .when-needed-grid { grid-template-columns: 1fr; } }
+  .when-card {
+    background: var(--white);
+    border: 1px dashed var(--lavender);
+    border-radius: var(--radius);
+    padding: 20px;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+  }
+  .when-card-icon { font-size: 22px; flex-shrink: 0; }
+  .when-card h4 { font-family:'Poppins',sans-serif; font-size:14px; color:var(--dark); margin-bottom:4px; }
+  .when-card p { font-size:12px; color:var(--text-muted); margin-bottom:10px; }
 </style>
 </head>
 <body>
@@ -40,17 +129,17 @@
   <div style="display:flex;align-items:center;justify-content:center;gap:16px;margin-bottom:24px;position:relative;z-index:1;">
     <div style="text-align:center;">
       <div style="font-family:'Poppins',sans-serif;font-size:14px;font-weight:600;color:rgba(255,255,255,0.7);letter-spacing:2px;text-transform:uppercase;">THRIVE SPEECH THERAPY</div>
-      <div style="font-family:'Poppins',sans-serif;font-size:11px;color:rgba(255,255,255,0.5);letter-spacing:3px;text-transform:uppercase;">Staff & Client Resource Portal</div>
+      <div style="font-family:'Poppins',sans-serif;font-size:11px;color:rgba(255,255,255,0.5);letter-spacing:3px;text-transform:uppercase;">Staff &amp; Client Resource Portal</div>
     </div>
   </div>
-  <h1>Staff & Client Policies</h1>
+  <h1>Staff &amp; Client Policies</h1>
   <p>Our policies are designed to create clarity, trust, and a great experience — for our team and the families we serve. Clear guidelines help everyone thrive.</p>
 </section>
 
 <!-- SEARCH -->
 <section class="section-sm bg-off-white" style="padding:40px 0;">
   <div class="container">
-    <p style="text-align:center;font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted);margin-bottom:16px;">Search Policies & Documents</p>
+    <p style="text-align:center;font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted);margin-bottom:16px;">Search Policies &amp; Documents</p>
     <div class="search-wrap">
       <input type="text" class="search-input" id="policySearch" placeholder="Search by keyword, policy name, topic..." oninput="runSearch(this.value)">
       <span class="search-icon">🔍</span>
@@ -66,14 +155,11 @@
     <h2 class="section-title">Policies for Staff</h2>
     <div class="divider"></div>
     <p class="section-subtitle" style="margin-bottom:40px;">Important documents every Thrive team member should know. Clear expectations, fair guidelines, and everything you need to thrive.</p>
-
-    <!-- STAFF TABS -->
     <div class="tabs">
       <div class="tab-nav">
         <button class="tab-btn active" onclick="switchTab('employment', this)">💼 Employment</button>
         <button class="tab-btn" onclick="switchTab('workers-comp', this)">🏥 Workers' Comp</button>
       </div>
-
       <!-- EMPLOYMENT TAB -->
       <div class="tab-panel active" id="tab-employment">
         <h3 style="margin-bottom:8px;color:var(--dark);">Employment Documents</h3>
@@ -104,7 +190,7 @@
           <div class="doc-card">
             <div class="doc-icon">📅</div>
             <div class="doc-info">
-              <h4>Holiday Calendar & Policy</h4>
+              <h4>Holiday Calendar &amp; Policy</h4>
               <p>Thrive's official holiday schedule and time-off policies for the year.</p>
               <div class="doc-meta">
                 <span class="badge badge-mauve">PDF · 145 KB</span>
@@ -136,7 +222,6 @@
           </div>
         </div>
       </div>
-
       <!-- WORKERS COMP TAB -->
       <div class="tab-panel" id="tab-workers-comp">
         <h3 style="margin-bottom:8px;color:var(--dark);">Workers' Compensation</h3>
@@ -181,55 +266,263 @@
   </div>
 </section>
 
-<!-- POLICIES FOR CLIENTS -->
+<!-- POLICIES FOR CLIENTS — Core Care Agreement structure (effective Nov 11, 2026) -->
 <section class="section bg-off-white">
   <div class="container">
     <span class="section-label">For the Families We Serve</span>
     <h2 class="section-title">Policies for Clients</h2>
     <div class="divider"></div>
-    <p class="section-subtitle" style="margin-bottom:40px;">These policies help us deliver consistent, high-quality care while honoring the time and commitment of both our team and our families.</p>
-    <div class="grid-2">
-      <div class="doc-card">
-        <div class="doc-icon" style="background:rgba(131,158,151,0.15);">🚫</div>
-        <div class="doc-info">
-          <h4>No Show / Late Cancel Policy</h4>
-          <p>Our cancellation policy requires <strong style="color:var(--mauve);">2 hours notice</strong> before a scheduled session. This policy ensures fairness to our team and other families waiting for care.</p>
-          <div class="doc-meta">
-            <span class="badge badge-mauve">PDF · 155 KB</span>
-            <a href="https://drive.google.com/file/d/1bkkRUcP_vF19ZuZSO_hQbhyfk4HZ1G1e/view?usp=sharing" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Open Document →</a>
+    <p class="section-subtitle" style="margin-bottom:32px;">One Core Care Agreement now replaces our separate consent and policy forms. Everything a family needs is below.</p>
+    <div class="new-banner">
+      <span class="new-banner-icon">🆕</span>
+      <div class="new-banner-text">
+        <strong>New paperwork — effective November 11, 2026</strong>
+        <span>The Core Care Agreement replaces the previous No Show / Late Cancel, Attendance, Health &amp; Illness, and Severe Weather forms. Use only the documents below for all new and renewing clients. Updated November 10, 2026.</span>
+      </div>
+    </div>
+    <div class="tabs">
+      <div class="client-tab-nav">
+        <button class="client-tab-btn active" onclick="switchClientTab('documents', this)">📄 Documents</button>
+        <button class="client-tab-btn" onclick="switchClientTab('what-to-send', this)">📤 What to Send</button>
+        <button class="client-tab-btn" onclick="switchClientTab('key-policies', this)">📌 Key Policies</button>
+      </div>
+
+      <!-- DOCUMENTS TAB -->
+      <div class="client-tab-panel active" id="ctab-documents">
+        <h3 style="margin-bottom:6px;color:var(--dark);">Core Paperwork</h3>
+        <p style="margin-bottom:24px;font-size:14px;">These five documents cover every client. The Core Care Agreement is the primary consent and policy form.</p>
+        <div class="grid-3" style="margin-bottom:36px;">
+          <div class="doc-card">
+            <div class="doc-icon" style="background:rgba(104,91,114,0.12);">📝</div>
+            <div class="doc-info">
+              <h4>Core Care Agreement</h4>
+              <p>Consent, clinic policies, payment terms, and Notice of Privacy Practices — for <strong>commercial insurance &amp; self-pay</strong> clients.</p>
+              <div class="doc-meta">
+                <span class="badge badge-mauve">PDF · 164 KB</span>
+                <a href="https://drive.google.com/file/d/1-bK2f6hgy8JAM6MdDbMjF2qzYKvvAcDv/view?usp=drivesdk" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Open Document →</a>
+              </div>
+              <div class="pill-diff"><span class="pill-comm">Commercial &amp; Self-Pay</span></div>
+            </div>
+          </div>
+          <div class="doc-card">
+            <div class="doc-icon" style="background:rgba(131,158,151,0.15);">📝</div>
+            <div class="doc-info">
+              <h4>Core Care Agreement</h4>
+              <p>Consent, clinic policies, Medicaid protections, and Notice of Privacy Practices — for <strong>Medicaid &amp; CHIP</strong> clients.</p>
+              <div class="doc-meta">
+                <span class="badge badge-mauve">PDF · 140 KB</span>
+                <a href="https://drive.google.com/file/d/1qJAINaQUV6F0LNVfKIfVBP-AxMcnkDxZ/view?usp=drivesdk" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Open Document →</a>
+              </div>
+              <div class="pill-diff"><span class="pill-mcd">Medicaid &amp; CHIP</span></div>
+            </div>
+          </div>
+          <div class="doc-card">
+            <div class="doc-icon" style="background:rgba(104,91,114,0.12);">📋</div>
+            <div class="doc-info">
+              <h4>Client Intake</h4>
+              <p>Demographic, insurance, emergency contact, and health history form for every new client.</p>
+              <div class="doc-meta">
+                <span class="badge badge-mauve">PDF · 94 KB</span>
+                <a href="https://drive.google.com/file/d/1gEZ5K9-z3zmIXGmDTeqSk3vgJ-iBPtx0/view?usp=drivesdk" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Open Document →</a>
+              </div>
+              <div class="pill-diff"><span class="pill-comm">Commercial &amp; Self-Pay</span><span class="pill-mcd">Medicaid &amp; CHIP</span></div>
+            </div>
+          </div>
+          <div class="doc-card">
+            <div class="doc-icon" style="background:rgba(104,91,114,0.12);">📬</div>
+            <div class="doc-info">
+              <h4>Welcome Packet</h4>
+              <p>Orientation information and what to expect — for <strong>commercial insurance &amp; self-pay</strong> families.</p>
+              <div class="doc-meta">
+                <span class="badge badge-mauve">PDF · 146 KB</span>
+                <a href="https://drive.google.com/file/d/1XKo_8ctWk1u7GJXHL7U0n3H5v93u1Y6k/view?usp=drivesdk" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Open Document →</a>
+              </div>
+              <div class="pill-diff"><span class="pill-comm">Commercial &amp; Self-Pay</span></div>
+            </div>
+          </div>
+          <div class="doc-card">
+            <div class="doc-icon" style="background:rgba(131,158,151,0.15);">📬</div>
+            <div class="doc-info">
+              <h4>Welcome Packet</h4>
+              <p>Orientation information and what to expect — for <strong>Medicaid &amp; CHIP</strong> families.</p>
+              <div class="doc-meta">
+                <span class="badge badge-mauve">PDF · 135 KB</span>
+                <a href="https://drive.google.com/file/d/1Yigd-vEpQqlPm4GNvpwi755-J4UDm7uk/view?usp=drivesdk" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Open Document →</a>
+              </div>
+              <div class="pill-diff"><span class="pill-mcd">Medicaid &amp; CHIP</span></div>
+            </div>
+          </div>
+        </div>
+        <h3 style="margin-bottom:6px;color:var(--dark);">When Needed</h3>
+        <p style="margin-bottom:16px;font-size:14px;">Collect only when clinically indicated — do not send to every client by default.</p>
+        <div class="when-needed-grid">
+          <div class="when-card">
+            <span class="when-card-icon">🔓</span>
+            <div>
+              <h4>Release of Information</h4>
+              <p>When records need to be shared with another provider, school, or third party.</p>
+              <a href="https://drive.google.com/file/d/1Mmb1F91AReoydk7mlLUld4MJLh-islsh/view?usp=drivesdk" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Open Document →</a>
+            </div>
+          </div>
+          <div class="when-card">
+            <span class="when-card-icon">🍽️</span>
+            <div>
+              <h4>Feeding &amp; Swallowing Supplement</h4>
+              <p>When feeding or swallowing services are part of the client's treatment plan.</p>
+              <a href="https://drive.google.com/file/d/1rz13jH6Ih0LlG6VghC11utdp3W44PBwC/view?usp=drivesdk" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Open Document →</a>
+            </div>
+          </div>
+          <div class="when-card">
+            <span class="when-card-icon">🚐</span>
+            <div>
+              <h4>Off-Site Services Agreement</h4>
+              <p>When sessions are provided at an ABA center, daycare, school, or other off-site location.</p>
+              <a href="https://drive.google.com/file/d/1A1ONRWeNEZF4KNwGapHcND3iGXA66sAQ/view?usp=drivesdk" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Open Document →</a>
+            </div>
+          </div>
+          <div class="when-card">
+            <span class="when-card-icon"">🧾</span>
+            <div>
+              <h4>Non-Covered Service Agreement</h4>
+              <p>When a service is not covered by the client's plan and they choose to pay privately for it.</p>
+              <a href="https://drive.google.com/file/d/1NQrIBlZ1gKDR6ifB_eflReb4hsrJjbEF/view?usp=drivesdk" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Open Document →</a>
+            </div>
           </div>
         </div>
       </div>
-      <div class="doc-card">
-        <div class="doc-icon" style="background:rgba(131,158,151,0.15);">📆</div>
-        <div class="doc-info">
-          <h4>Attendance Policy</h4>
-          <p>Guidelines for consistent session attendance and how we support families in maintaining their child's therapy schedule for best outcomes.</p>
-          <div class="doc-meta">
-            <span class="badge badge-mauve">PDF · 86 KB</span>
-            <a href="https://drive.google.com/file/d/1j4j52FLb_KddVsh3_GXmpRksEp11Q0dE/view?usp=sharing" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Open Document →</a>
-          </div>
+
+      <!-- WHAT TO SEND TAB -->
+      <div class="client-tab-panel" id="ctab-what-to-send">
+        <h3 style="margin-bottom:6px;color:var(--dark);">Paperwork by Client Type</h3>
+        <p style="margin-bottom:24px;font-size:14px;">Use this guide to know exactly which documents to send before the first visit. All new and renewing clients need the Core Care Agreement in SimplePractice before the evaluation.</p>
+        <div style="background:var(--white);border-radius:var(--radius);border:1px solid var(--border);overflow:hidden;margin-bottom:28px;">
+          <table class="send-table">
+            <thead>
+              <tr>
+                <th>Document</th>
+                <th style="background:rgba(104,91,114,0.85);">Commercial &amp; Self-Pay</th>
+                <th style="background:rgba(131,158,151,0.85);">Medicaid &amp; CHIP</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Core Care Agreement</td>
+                <td><a class="doc-link" href="https://drive.google.com/file/d/1-bK2f6hgy8JAM6MdDbMjF2qzYKvvAcDv/view?usp=drivesdk" target="_blank" rel="noopener">Commercial &amp; Self-Pay version ✓</a></td>
+                <td><a class="doc-link" href="https://drive.google.com/file/d/1qJAINaQUV6F0LNVfKIfVBP-AxMcnkDxZ/view?usp=drivesdk" target="_blank" rel="noopener">Medicaid &amp; CHIP version ✓</a></td>
+              </tr>
+              <tr>
+                <td>Client Intake</td>
+                <td><a class="doc-link" href="https://drive.google.com/file/d/1gEZ5K9-z3zmIXGmDTeqSk3vgJ-iBPtx0/view?usp=drivesdk" target="_blank" rel="noopener">Same form ✓</a></td>
+                <td><a class="doc-link" href="https://drive.google.com/file/d/1gEZ5K9-z3zmIXGmDTeqSk3vgJ-iBPtx0/view?usp=drivesdk" target="_blank" rel="noopener">Same form ✓</a></td>
+              </tr>
+              <tr>
+                <td>Welcome Packet</td>
+                <td><a class="doc-link" href="https://drive.google.com/file/d/1XKo_8ctWk1u7GJXHL7U0n3H5v93u1Y6k/view?usp=drivesdk" target="_blank" rel="noopener">Commercial &amp; Self-Pay version ✓</a></td>
+                <td><a class="doc-link" href="https://drive.google.com/file/d/1Yigd-vEpQqlPm4GNvpwi755-J4UDm7uk/view?usp=drivesdk" target="_blank" rel="noopener">Medicaid &amp; CHIP version ✓</a></td>
+              </tr>
+              <tr>
+                <td>Card on file required?</td>
+                <td><strong style="color:var(--mauve);">Yes</strong> — before first visit (including evaluation)</td>
+                <td><strong style="color:#3d6b62;">No</strong> — not required for covered Medicaid care</td>
+              </tr>
+              <tr>
+                <td>Release of Information</td>
+                <td colspan="2">Only when records must be shared with another party</td>
+              </tr>
+              <tr>
+                <td>Feeding &amp; Swallowing Supplement</td>
+                <td colspan="2">Only when feeding/swallowing is part of the treatment plan</td>
+              </tr>
+              <tr>
+                <td>Off-Site Services Agreement</td>
+                <td colspan="2">Only when sessions occur at ABA center, daycare, school, etc.</td>
+              </tr>
+              <tr>
+                <td>Non-Covered Service Agreement</td>
+                <td colspan="2">Only when a specific service is not covered and client agrees to pay privately</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div style="background:var(--lilac);border-radius:var(--radius);padding:20px 24px;">
+          <p style="margin:0;font-size:14px;color:var(--dark);"><strong>Tip:</strong> The Core Care Agreement in SimplePractice must be signed before the evaluation begins. If a client's coverage type changes, have them sign the appropriate version before the next visit and notify admin so billing is updated.</p>
         </div>
       </div>
-      <div class="doc-card">
-        <div class="doc-icon" style="background:rgba(131,158,151,0.15);">🌡️</div>
-        <div class="doc-info">
-          <h4>Health & Illness Policy</h4>
-          <p>When to keep your child home and how we protect the health and safety of all children and clinicians in our care.</p>
-          <div class="doc-meta">
-            <span class="badge badge-mauve">PDF · 211 KB</span>
-            <a href="https://drive.google.com/file/d/1wHxLmalPoJFN7sW3Golz36X6QF9HfGHO/view?usp=sharing" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Open Document →</a>
-          </div>
+
+      <!-- KEY POLICIES TAB -->
+      <div class="client-tab-panel" id="ctab-key-policies">
+        <h3 style="margin-bottom:6px;color:var(--dark);">Key Policy Rules at a Glance</h3>
+        <p style="margin-bottom:24px;font-size:14px;">These rules come directly from the Core Care Agreements (effective November 11, 2026). For full terms, open the agreement for the client's coverage type.</p>
+        <div class="policy-rule">
+          <h4>✍️ How to cancel</h4>
+          <p><strong>Written notice only</strong> — text or email to the therapist's work number/email, email to admin@thrivespeech.net, or a message through the Client Portal.</p>
+          <ul>
+            <li>Phone calls, voicemails, and in-person messages <strong>do not count</strong>.</li>
+            <li><strong>On time:</strong> written message received ≥ 2 hours before the visit start. The timestamp Thrive receives is the official record.</li>
+            <li><strong>Late cancel:</strong> less than 2 hours' written notice.</li>
+            <li><strong>No-show:</strong> client misses the visit with no written notice at all.</li>
+          </ul>
         </div>
-      </div>
-      <div class="doc-card">
-        <div class="doc-icon" style="background:rgba(131,158,151,0.15);">⛈️</div>
-        <div class="doc-info">
-          <h4>Severe Weather Cancellation Policy</h4>
-          <p>Our procedures for session cancellations and rescheduling during severe weather events in the Houston area.</p>
-          <div class="doc-meta">
-            <span class="badge badge-mauve">PDF · 76 KB</span>
-            <a href="https://drive.google.com/file/d/1b0VDigqfIla-oPHdU_TJ7eKf-gKXxMuI/view?usp=sharing" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Open Document →</a>
+        <div class="policy-rule">
+          <h4>💳 Late cancel / no-show fee</h4>
+          <div class="pill-diff" style="margin-bottom:10px;"><span class="pill-comm">Commercial &amp; Self-Pay</span><span class="pill-mcd">Medicaid &amp; CHIP</span></div>
+          <ul>
+            <li><span class="pill-comm" style="display:inline;">Commercial &amp; Self-Pay</span> — <strong>$50 fee</strong> per occurrence, charged to the card on file. Not billed to insurance. Non-refundable even if a make-up is scheduled.</li>
+            <li><span class="pill-mcd" style="display:inline;">Medicaid &amp; CHIP</span> — <strong>No fee</strong>, but each late cancel or no-show still counts toward the attendance limits below.</li>
+          </ul>
+        </div>
+        <div class="policy-rule">
+          <h4>🚫 When no fee applies (all clients)</h4>
+          <ul>
+            <li>Thrive cancels or closes.</li>
+            <li>Client develops a stay-home symptom less than 2 hours before the visit <em>and</em> written notice is sent before the start time.</li>
+            <li>An official severe-weather warning is in effect for the client's area <em>and</em> written notice is sent before the start time.</li>
+            <li>A medical emergency prevented notice <em>and</em> proof is sent within 7 days.</li>
+          </ul>
+        </div>
+        <div class="policy-rule">
+          <h4>📅 Attendance — 75% per month</h4>
+          <ul>
+            <li>Each calendar month: attended ÷ scheduled visits must be ≥ 75%.</li>
+            <li>Visits cancelled by Thrive, clinic closures, weather absences, Thrive-placed holds, and approved medical holds are excluded. Make-ups within 14 days fill their missed slot.</li>
+            <li>If attendance falls below 75%, Thrive reaches out in writing to make a plan.</li>
+            <li><strong>After 2 late cancels or no-shows within 30 days</strong> → recurring time may be released; open appointments offered instead.</li>
+            <li><strong>After 3 within 60 days, or below 75% for 60 consecutive days</strong> → Thrive may end services. Written notice given before either step, with records and referrals.</li>
+          </ul>
+        </div>
+        <div class="policy-rule">
+          <h4>🌡️ Illness — when to stay home</h4>
+          <p style="margin-bottom:8px;">Mild cough or runny nose without fever: OK to attend (mask recommended). Keep the client home and notify the therapist if any of the following apply:</p>
+          <ul>
+            <li><strong>Fever ≥ 100.4°F</strong> → return after 24 hrs fever-free without fever medicine.</li>
+            <li><strong>Vomiting or diarrhea</strong> in the past 24 hrs → return after 24 hrs symptom-free.</li>
+            <li><strong>Strep throat or impetigo</strong> → return after 24 hrs of antibiotics and no fever.</li>
+            <li><strong>Pink eye</strong> → return after 24 hrs of treatment with no active redness or discharge.</li>
+            <li><strong>Hand, foot, and mouth disease</strong> → return after 24 hrs fever-free without fever medicine and once blisters have dried.</li>
+            <li><strong>COVID-19, flu, and other respiratory illness</strong> → return after 24 hrs fever-free without fever medicine and when symptoms are improving. Mask recommended for the next 5 days.</li>
+            <li><strong>Other contagious conditions</strong> → return when no longer contagious; doctor's note may be required.</li>
+            <li><strong>Open or bleeding wounds</strong> → must be covered, healing, and not at risk of infection.</li>
+          </ul>
+        </div>
+        <div class="policy-rule" style="border-left-color:var(--sage);">
+          <h4 style="color:#3d6b62;">💳 Card on file &amp; payment</h4>
+          <div class="pill-diff" style="margin-bottom:10px;"><span class="pill-comm">Commercial &amp; Self-Pay</span></div>
+          <ul>
+            <li>A valid credit, debit, or HSA/FSA card must be on file before the first appointment and for as long as the client receives services.</li>
+            <li>Copays and deductible amounts are charged on the day of the visit.</li>
+            <li>Remaining balance after insurance processes: statement sent via Client Portal/email → charged 10 days later.</li>
+            <li>HSA/FSA cards cannot be used for the $50 late cancel fee — keep a regular card on file for that.</li>
+          </ul>
+          <div class="pill-diff" style="margin-top:14px;margin-bottom:8px;"><span class="pill-mcd">Medicaid &amp; CHIP</span></div>
+          <ul>
+            <li>No card required. Families are not billed for covered Medicaid services.</li>
+            <li>If Medicaid coverage ends, visits pause until restored — or the family may choose in writing to continue at the self-pay rate.</li>
+          </ul>
+        </div>
+        <div style="text-align:center;margin-top:28px;">
+          <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+            <a href="https://drive.google.com/file/d/1-bK2f6hgy8JAM6MdDbMjF2qzYKvvAcDv/view?usp=drivesdk" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Core Care Agreement — Commercial &amp; Self-Pay →</a>
+            <a href="https://drive.google.com/file/d/1qJAINaQUV6F0LNVfKIfVBP-AxMcnkDxZ/view?usp=drivesdk" target="_blank" rel="noopener" class="btn btn-sage btn-sm">Core Care Agreement — Medicaid &amp; CHIP →</a>
           </div>
         </div>
       </div>
@@ -243,75 +536,53 @@
     <span class="section-label">Got Questions?</span>
     <h2 class="section-title">Common Questions</h2>
     <div class="divider"></div>
-    <p class="section-subtitle" style="margin-bottom:40px;">Quick answers to the questions our team and families ask most often.</p>
+    <p class="section-subtitle" style="margin-bottom:40px;">Quick answers drawn from the Core Care Agreements (effective November 11, 2026).</p>
     <div>
       <div class="accordion-item">
-        <button class="accordion-btn" onclick="toggleAccordion(this)">
-          What is the cancellation policy?
-          <span class="accordion-icon">+</span>
-        </button>
+        <button class="accordion-btn" onclick="toggleAccordion(this)">What is the cancellation policy?<span class="accordion-icon">+</span></button>
         <div class="accordion-content">
-          <p>Thrive Speech Therapy requires a minimum of <strong>2 hours notice</strong> before a scheduled session to cancel without penalty. Cancellations made with less than 2 hours notice or no-shows may be subject to a late cancellation fee. This policy exists to respect our clinicians' time and allow other families on our waitlist to access care. Please refer to the No Show / Late Cancel Policy document for complete details.</p>
-          <div style="margin-top:16px;">
-            <a href="https://drive.google.com/file/d/1bkkRUcP_vF19ZuZSO_hQbhyfk4HZ1G1e/view?usp=sharing" target="_blank" rel="noopener" class="btn btn-outline btn-sm">View Full Policy →</a>
+          <p>Cancellations must be <strong>in writing</strong> — a text or email to the therapist's work contact, an email to admin@thrivespeech.net, or a Client Portal message. <strong>Phone calls and voicemails do not count.</strong></p>
+          <p style="margin-top:10px;"><strong>On time:</strong> written message received at least 2 hours before the visit.<br><strong>Late cancel:</strong> less than 2 hours' written notice → $50 fee (commercial/self-pay); counts toward attendance (Medicaid/CHIP).<br><strong>No-show:</strong> no written notice → same treatment as late cancel.</p>
+          <p style="margin-top:10px;"><strong>No fee</strong> (all clients) when: Thrive cancels; a sudden stay-home symptom develops and written notice is sent before start time; an official severe-weather warning is in effect and written notice is sent before start time; or a medical emergency prevented notice and proof is provided within 7 days.</p>
+          <div style="margin-top:16px;display:flex;gap:10px;flex-wrap:wrap;">
+            <a href="https://drive.google.com/file/d/1-bK2f6hgy8JAM6MdDbMjF2qzYKvvAcDv/view?usp=drivesdk" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Core Care Agreement — Commercial →</a>
+            <a href="https://drive.google.com/file/d/1qJAINaQUV6F0LNVfKIfVBP-AxMcnkDxZ/view?usp=drivesdk" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Core Care Agreement — Medicaid →</a>
           </div>
         </div>
       </div>
       <div class="accordion-item">
-        <button class="accordion-btn" onclick="toggleAccordion(this)">
-          What happens if a client misses a session without notice?
-          <span class="accordion-icon">+</span>
-        </button>
+        <button class="accordion-btn" onclick="toggleAccordion(this)">What happens if a client misses a session without notice?<span class="accordion-icon">+</span></button>
         <div class="accordion-content">
-          <p>No-shows or cancellations with less than 2 hours notice are documented and may result in a late cancellation fee per our policy. Repeated no-shows may affect a client's scheduling priority. Our team will always reach out to support families in maintaining consistent attendance, as regular attendance is critical to achieving the best therapy outcomes for each child.</p>
-          <div style="margin-top:16px;">
-            <a href="https://drive.google.com/file/d/1j4j52FLb_KddVsh3_GXmpRksEp11Q0dE/view?usp=sharing" target="_blank" rel="noopener" class="btn btn-outline btn-sm">View Attendance Policy →</a>
-          </div>
+          <p>A no-show (or late cancel) is recorded and: <strong>Commercial/self-pay</strong> → $50 fee charged to card on file; <strong>Medicaid/CHIP</strong> → no fee, but counts toward attendance limits.</p>
+          <p style="margin-top:10px;"><strong>Attendance steps:</strong> After 2 late cancels or no-shows within 30 days, recurring time slot may be released. After 3 within 60 days or attendance below 75% for 60 consecutive days, Thrive may end services with written notice first.</p>
+          <div style="margin-top:16px;"><a href="https://drive.google.com/file/d/1-bK2f6hgy8JAM6MdDbMjF2qzYKvvAcDv/view?usp=drivesdk" target="_blank" rel="noopener" class="btn btn-outline btn-sm">View Core Care Agreement (Section 5) →</a></div>
         </div>
       </div>
       <div class="accordion-item">
-        <button class="accordion-btn" onclick="toggleAccordion(this)">
-          What are the holiday and time-off policies?
-          <span class="accordion-icon">+</span>
-        </button>
+        <button class="accordion-btn" onclick="toggleAccordion(this)">What are the holiday and time-off policies?<span class="accordion-icon">+</span></button>
         <div class="accordion-content">
-          <p>Thrive observes several major holidays throughout the year during which clinics are closed. Staff should refer to the Holiday Calendar & Policy document for the complete list of observed holidays, clinic closure dates, and guidelines for requesting time off. All time-off requests must be submitted and approved in advance through Gusto.</p>
-          <div style="margin-top:16px;">
-            <a href="https://drive.google.com/file/d/1pjom9bOkKgS9U0GmjowAROjyriiuytb2/view?usp=sharing" target="_blank" rel="noopener" class="btn btn-outline btn-sm">View Holiday Policy →</a>
-          </div>
+          <p>Thrive observes several major holidays throughout the year during which clinics are closed. Staff should refer to the Holiday Calendar &amp; Policy document for the complete list. All time-off requests must be submitted and approved in advance through Gusto.</p>
+          <div style="margin-top:16px;"><a href="https://drive.google.com/file/d/1pjom9bOkKgS9U0GmjowAROjyriiuytb2/view?usp=sharing" target="_blank" rel="noopener" class="btn btn-outline btn-sm">View Holiday Policy →</a></div>
         </div>
       </div>
       <div class="accordion-item">
-        <button class="accordion-btn" onclick="toggleAccordion(this)">
-          How do I report a workplace injury?
-          <span class="accordion-icon">+</span>
-        </button>
+        <button class="accordion-btn" onclick="toggleAccordion(this)">How do I report a workplace injury?<span class="accordion-icon">+</span></button>
         <div class="accordion-content">
-          <p>Any workplace injury should be reported immediately to your clinic supervisor and HR. Thrive's Workers' Compensation Policy outlines the complete reporting process, timeline requirements, and your rights as an employee. Please do not delay reporting — timely reporting ensures you receive the benefits and support you are entitled to. Review the Workers' Comp Guide for Thrivers for step-by-step instructions.</p>
-          <div style="margin-top:16px;">
-            <a href="https://drive.google.com/drive/folders/1k0eVfQ3DpEGmvIoX5WWvYjb92U-LWVWY?usp=drive_link" target="_blank" rel="noopener" class="btn btn-outline btn-sm">View Workers' Comp Documents →</a>
-          </div>
+          <p>Any workplace injury should be reported immediately to your clinic supervisor and HR. Thrive's Workers' Compensation Policy outlines the complete reporting process, timeline requirements, and your rights as an employee.</p>
+          <div style="margin-top:16px;"><a href="https://drive.google.com/file/d/1zOzoQ4rJgeF35vvJDPrk-TszGiwary2a/view?usp=sharing" target="_blank" rel="noopener" class="btn btn-outline btn-sm">View Workers' Comp Policy →</a></div>
         </div>
       </div>
       <div class="accordion-item">
-        <button class="accordion-btn" onclick="toggleAccordion(this)">
-          What is the severe weather cancellation procedure?
-          <span class="accordion-icon">+</span>
-        </button>
+        <button class="accordion-btn" onclick="toggleAccordion(this)">What is the severe weather cancellation procedure?<span class="accordion-icon">+</span></button>
         <div class="accordion-content">
-          <p>During severe weather events — including hurricanes, flooding, or other Houston-area weather emergencies — Thrive will communicate clinic closure decisions through official company channels as early as possible. Families and staff should refer to the Severe Weather Cancellation Policy for complete procedures, including how sessions are rescheduled and how fees are handled during weather-related closures.</p>
-          <div style="margin-top:16px;">
-            <a href="https://drive.google.com/file/d/1b0VDigqfIla-oPHdU_TJ7eKf-gKXxMuI/view?usp=sharing" target="_blank" rel="noopener" class="btn btn-outline btn-sm">View Weather Policy →</a>
-          </div>
+          <p>If authorities warn of unsafe travel, Thrive may close or move visits to video. <strong>No fee applies</strong> when Thrive closes. If an <strong>official severe-weather warning</strong> is in effect for a family's area and they decide not to travel, they must send <strong>written notice before the visit start time</strong> — no fee applies. Phone calls and voicemails do not count.</p>
+          <div style="margin-top:16px;"><a href="https://drive.google.com/file/d/1-bK2f6hgy8JAM6MdDbMjF2qzYKvvAcDv/view?usp=drivesdk" target="_blank" rel="noopener" class="btn btn-outline btn-sm">View Core Care Agreement (Section 7) →</a></div>
         </div>
       </div>
       <div class="accordion-item">
-        <button class="accordion-btn" onclick="toggleAccordion(this)">
-          Who do I contact if I have a question about a policy?
-          <span class="accordion-icon">+</span>
-        </button>
+        <button class="accordion-btn" onclick="toggleAccordion(this)">Who do I contact if I have a question about a policy?<span class="accordion-icon">+</span></button>
         <div class="accordion-content">
-          <p>For questions about any Thrive policy, please reach out to your clinic supervisor or contact our admin team directly. We are always here to help clarify and support you.</p>
+          <p>For questions about any Thrive policy, please reach out to your clinic supervisor or contact our admin team directly.</p>
           <div style="margin-top:16px;display:flex;gap:12px;flex-wrap:wrap;">
             <a href="mailto:admin@thrivespeech.net" class="btn btn-outline btn-sm">✉️ admin@thrivespeech.net</a>
             <a href="tel:+12819821313" class="btn btn-outline btn-sm">📞 (281) 982-1313</a>
@@ -327,21 +598,24 @@
   <div class="footer-logo">THRIVE Speech Therapy</div>
   <p style="color:rgba(255,255,255,0.6);font-size:13px;">Internal Staff Portal</p>
   <div class="footer-restricted">🔒 Authorized Thrive Team Members Only</div>
-  <p class="footer-legal">© 2026 Thrive Speech Therapy, PLLC. All rights reserved. All content, materials, policies, and resources contained within this portal are the confidential and proprietary property of Thrive Speech Therapy, PLLC and may not be reproduced, distributed, or disclosed without express written permission. This portal may contain personal health information protected under HIPAA and applicable federal and state privacy laws.</p>
+  <p class="footer-legal">© 2026 Thrive Speech Therapy, PLLC. All rights reserved. All content, materials, policies, and resources contained within this portal are the confidential and proprietary property of Thrive Speech Therapy, PLLC and may not be reproduced, distributed, or disclosed without express written permission.</p>
   <p class="footer-legal">If you have accessed this page in error, please exit immediately and contact <a href="mailto:admin@thrivespeech.net" style="color:var(--lavender);">admin@thrivespeech.net</a>.</p>
   <p class="footer-heart">Thank you for being part of the Thrive family. Together, we help every child find their voice. 💜</p>
 </footer>
 
 <script>
-// Tab switching
 function switchTab(id, btn) {
   document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
   document.getElementById('tab-' + id).classList.add('active');
   btn.classList.add('active');
 }
-
-// Accordion
+function switchClientTab(id, btn) {
+  document.querySelectorAll('.client-tab-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.client-tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('ctab-' + id).classList.add('active');
+  btn.classList.add('active');
+}
 function toggleAccordion(btn) {
   const content = btn.nextElementSibling;
   const isOpen = content.classList.contains('open');
@@ -349,23 +623,30 @@ function toggleAccordion(btn) {
   document.querySelectorAll('.accordion-btn').forEach(b => b.classList.remove('active'));
   if (!isOpen) { content.classList.add('open'); btn.classList.add('active'); }
 }
-
-// Search index
 const searchData = [
-  { title: 'Employee Handbook', desc: 'Complete guide to working at Thrive — policies, expectations, benefits', keywords: ['handbook', 'employee', 'policies', 'benefits', 'employment', 'guide'], url: 'https://drive.google.com/file/d/1tf1aGxyoNh1IxI5sh9QlJl8hvERPgT3M/view?usp=sharing', icon: '📘' },
+  { title: 'Employee Handbook', desc: 'Complete guide to working at Thrive', keywords: ['handbook', 'employee', 'policies', 'benefits', 'employment', 'guide'], url: 'https://drive.google.com/file/d/1tf1aGxyoNh1IxI5sh9QlJl8hvERPgT3M/view?usp=sharing', icon: '📘' },
   { title: 'Maternity Leave Policy', desc: 'Maternity leave, timelines, and returning to work', keywords: ['maternity', 'leave', 'pregnancy', 'baby', 'parental', 'mother'], url: 'https://drive.google.com/file/d/13J6U8AU8vhh1bRwDjfig1pvhj8QhgAAH/view?usp=sharing', icon: '🤰' },
   { title: 'Holiday Calendar & Policy', desc: 'Official holiday schedule and time-off policies', keywords: ['holiday', 'calendar', 'time off', 'pto', 'vacation', 'days off', 'closure'], url: 'https://drive.google.com/file/d/1pjom9bOkKgS9U0GmjowAROjyriiuytb2/view?usp=sharing', icon: '📅' },
-  { title: '40 Sessions Per Week Policy', desc: 'Caseload capacity and weekly session limits', keywords: ['sessions', 'caseload', '40', 'capacity', 'weekly', 'limits', 'scheduling'], url: 'https://drive.google.com/file/d/1615k3eB5g67QbqUAvBQ8-4SP2xe_VHji/view?usp=sharing', icon: '📊' },
+  { title: '40 Sessions Per Week Policy', desc: 'Caseload capacity and weekly session limits', keywords: ['sessions', 'caseload', '40', 'capacity', 'weekly', 'limits'], url: 'https://drive.google.com/file/d/1615k3eB5g67QbqUAvBQ8-4SP2xe_VHji/view?usp=sharing', icon: '📊' },
   { title: 'Photo Release Form', desc: 'Client photography and media consent form', keywords: ['photo', 'release', 'consent', 'photography', 'media', 'form', 'picture'], url: 'https://drive.google.com/file/d/1tKzsgYchAd0-BzuVWMcKkD8MczeORkRg/view?usp=drive_link', icon: '📸' },
-  { title: "Workers' Compensation Policy", desc: 'Complete Workers Comp policy — eligibility, reporting, benefits', keywords: ['workers comp', 'compensation', 'injury', 'workplace injury', 'workers', 'wc'], url: 'https://drive.google.com/file/d/1zOzoQ4rJgeF35vvJDPrk-TszGiwary2a/view?usp=sharing', icon: '🛡️' },
-  { title: "Workers' Comp Guide for Thrivers", desc: 'Practical guide to navigating Workers Compensation', keywords: ['workers comp guide', 'injury guide', 'compensation guide', 'how to', 'claim'], url: 'https://drive.google.com/file/d/14RegfT3Vv6BJtMZyUA4P-lBd7aU3PTDE/view?usp=sharing', icon: '📋' },
+  { title: "Workers' Compensation Policy", desc: 'Complete Workers Comp policy — eligibility, reporting, benefits', keywords: ['workers comp', 'compensation', 'injury', 'workplace injury', 'wc'], url: 'https://drive.google.com/file/d/1zOzoQ4rJgeF35vvJDPrk-TszGiwary2a/view?usp=sharing', icon: '🛡️' },
+  { title: "Workers' Comp Guide for Thrivers", desc: 'Practical guide to navigating Workers Compensation', keywords: ['workers comp guide', 'injury guide', 'compensation guide', 'claim'], url: 'https://drive.google.com/file/d/14RegfT3Vv6BJtMZyUA4P-lBd7aU3PTDE/view?usp=sharing', icon: '📋' },
   { title: "Workers' Comp Training", desc: 'Required training materials for Workers Compensation', keywords: ['training', 'workers comp training', 'required training', 'compliance'], url: 'https://drive.google.com/file/d/1VrNGEOJJVwtQKIi4lAkgZdKQu4YTK2GI/view?usp=sharing', icon: '🎓' },
-  { title: 'No Show / Late Cancel Policy', desc: 'Cancellation requires 2 hours notice before session', keywords: ['cancel', 'cancellation', 'no show', 'late cancel', '2 hours', 'missed', 'appointment', 'absence'], url: 'https://drive.google.com/file/d/1bkkRUcP_vF19ZuZSO_hQbhyfk4HZ1G1e/view?usp=sharing', icon: '🚫' },
-  { title: 'Attendance Policy', desc: 'Session attendance guidelines and expectations', keywords: ['attendance', 'session', 'schedule', 'consistent', 'regular'], url: 'https://drive.google.com/file/d/1j4j52FLb_KddVsh3_GXmpRksEp11Q0dE/view?usp=sharing', icon: '📆' },
-  { title: 'Health & Illness Policy', desc: 'When to keep your child home — health and safety guidelines', keywords: ['health', 'illness', 'sick', 'fever', 'contagious', 'covid', 'safety'], url: 'https://drive.google.com/file/d/1wHxLmalPoJFN7sW3Golz36X6QF9HfGHO/view?usp=sharing', icon: '🌡️' },
-  { title: 'Severe Weather Cancellation Policy', desc: 'Procedures for session cancellations during severe weather', keywords: ['weather', 'severe', 'hurricane', 'storm', 'flood', 'emergency', 'closure'], url: 'https://drive.google.com/file/d/1b0VDigqfIla-oPHdU_TJ7eKf-gKXxMuI/view?usp=sharing', icon: '⛈️' },
+  { title: 'Core Care Agreement — Commercial & Self-Pay', desc: 'Consent, policies, payment terms, and privacy notice for commercial/self-pay clients', keywords: ['core care agreement', 'consent', 'commercial', 'self pay', 'private pay', 'policies', 'agreement', 'paperwork', 'new'], url: 'https://drive.google.com/file/d/1-bK2f6hgy8JAM6MdDbMjF2qzYKvvAcDv/view?usp=drivesdk', icon: '📝' },
+  { title: 'Core Care Agreement — Medicaid & CHIP', desc: 'Consent, policies, Medicaid protections, and privacy notice for Medicaid/CHIP clients', keywords: ['core care agreement', 'medicaid', 'chip', 'consent', 'policies', 'agreement', 'paperwork', 'new'], url: 'https://drive.google.com/file/d/1qJAINaQUV6F0LNVfKIfVBP-AxMcnkDxZ/view?usp=drivesdk', icon: '📝' },
+  { title: 'Client Intake', desc: 'Demographic, insurance, emergency contact and health history form for all new clients', keywords: ['intake', 'intake form', 'new client', 'demographic', 'insurance', 'emergency contact', 'health history'], url: 'https://drive.google.com/file/d/1gEZ5K9-z3zmIXGmDTeqSk3vgJ-iBPtx0/view?usp=drivesdk', icon: '📋' },
+  { title: 'Welcome Packet — Commercial & Self-Pay', desc: 'Orientation and what to expect for commercial and self-pay families', keywords: ['welcome', 'welcome packet', 'commercial', 'self pay', 'orientation', 'new family'], url: 'https://drive.google.com/file/d/1XKo_8ctWk1u7GJXHL7U0n3H5v93u1Y6k/view?usp=drivesdk', icon: '📬' },
+  { title: 'Welcome Packet — Medicaid & CHIP', desc: 'Orientation and what to expect for Medicaid and CHIP families', keywords: ['welcome', 'welcome packet', 'medicaid', 'chip', 'orientation', 'new family'], url: 'https://drive.google.com/file/d/1Yigd-vEpQqlPm4GNvpwi755-J4UDm7uk/view?usp=drivesdk', icon: '📬' },
+  { title: 'Release of Information', desc: 'When records need to be shared with another provider, school, or third party', keywords: ['release', 'release of information', 'records', 'share', 'school', 'provider', 'roi'], url: 'https://drive.google.com/file/d/1Mmb1F91AReoydk7mlLUld4MJLh-islsh/view?usp=drivesdk', icon: '🔓' },
+  { title: 'Feeding & Swallowing Supplement', desc: 'Required when feeding or swallowing services are part of the treatment plan', keywords: ['feeding', 'swallowing', 'supplement', 'dysphagia', 'food', 'eating'], url: 'https://drive.google.com/file/d/1rz13jH6Ih0LlG6VghC11utdp3W44PBwC/view?usp=drivesdk', icon: '🍽️' },
+  { title: 'Off-Site Services Agreement', desc: 'Required when sessions occur at ABA center, daycare, school, or other off-site location', keywords: ['off site', 'offsite', 'aba', 'daycare', 'school', 'off campus', 'outside clinic'], url: 'https://drive.google.com/file/d/1A1ONRWeNEZF4KNwGapHcND3iGXA66sAQ/view?usp=drivesdk', icon: '🚐' },
+  { title: 'Non-Covered Service Agreement', desc: 'Required when a service is not covered by the plan and client chooses to pay privately', keywords: ['non covered', 'non-covered', 'private pay', 'not covered', 'insurance', 'out of pocket'], url: 'https://drive.google.com/file/d/1NQrIBlZ1gKDR6ifB_eflReb4hsrJjbEF/view?usp=drivesdk', icon: '🧾' },
+  { title: 'Cancellation policy', desc: 'Written notice only, 2 hours before visit. $50 fee commercial/self-pay. No fee Medicaid.', keywords: ['cancel', 'cancellation', 'late cancel', 'no show', '2 hours', 'fee', '$50', 'missed', 'written'], url: 'https://drive.google.com/file/d/1-bK2f6hgy8JAM6MdDbMjF2qzYKvvAcDv/view?usp=drivesdk', icon: '🚫' },
+  { title: 'Attendance policy', desc: '75% attendance per month. Escalation steps after repeated no-shows or late cancels.', keywords: ['attendance', '75%', 'monthly', 'no show', 'reschedule', 'recurring', 'discharge'], url: 'https://drive.google.com/file/d/1-bK2f6hgy8JAM6MdDbMjF2qzYKvvAcDv/view?usp=drivesdk', icon: '📆' },
+  { title: 'Illness / sick policy', desc: 'CDC-aligned rules for when to keep the client home — fever, vomiting, COVID, strep, etc.', keywords: ['illness', 'sick', 'fever', 'covid', 'vomiting', 'strep', 'pink eye', 'hand foot mouth', 'contagious', 'health'], url: 'https://drive.google.com/file/d/1-bK2f6hgy8JAM6MdDbMjF2qzYKvvAcDv/view?usp=drivesdk', icon: '🌡️' },
+  { title: 'Severe weather policy', desc: 'Written notice before start time required. No fee when official warning is in effect.', keywords: ['weather', 'severe', 'hurricane', 'storm', 'flood', 'emergency', 'closure', 'unsafe travel'], url: 'https://drive.google.com/file/d/1-bK2f6hgy8JAM6MdDbMjF2qzYKvvAcDv/view?usp=drivesdk', icon: '⛈️' },
+  { title: 'Card on file', desc: 'Required for commercial/self-pay before first visit. Not required for Medicaid/CHIP.', keywords: ['card', 'credit card', 'payment', 'billing', 'card on file', 'hsa', 'fsa', 'debit'], url: 'https://drive.google.com/file/d/1-bK2f6hgy8JAM6MdDbMjF2qzYKvvAcDv/view?usp=drivesdk', icon: '💳' },
 ];
-
 function runSearch(query) {
   const results = document.getElementById('searchResults');
   if (!query || query.length < 2) { results.classList.remove('show'); return; }
@@ -374,19 +655,19 @@ function runSearch(query) {
     item.title.toLowerCase().includes(q) ||
     item.desc.toLowerCase().includes(q) ||
     item.keywords.some(k => k.toLowerCase().includes(q))
-  ).slice(0, 6);
+  ).slice(0, 7);
   if (matches.length === 0) {
-    results.innerHTML = `<div class="search-no-results">No results for "<strong>${query}</strong>". Try different keywords or browse the sections above.<br><br><a href="mailto:admin@thrivespeech.net" style="color:var(--mauve);">Contact admin@thrivespeech.net for help</a></div>`;
+    results.innerHTML = '<div class="search-no-results">No results for "<strong>' + query + '</strong>". Try different keywords or browse the sections above.<br><br><a href="mailto:admin@thrivespeech.net" style="color:var(--mauve);">Contact admin@thrivespeech.net for help</a></div>';
   } else {
-    results.innerHTML = matches.map(m => `
-      <a href="${m.url}" target="_blank" rel="noopener" class="search-result-item" style="text-decoration:none;">
-        <span class="search-result-icon">${m.icon}</span>
-        <div><div class="search-result-title">${m.title}</div><div class="search-result-desc">${m.desc}</div></div>
-      </a>`).join('');
+    results.innerHTML = matches.map(m =>
+      '<a href="' + m.url + '" target="_blank" rel="noopener" class="search-result-item" style="text-decoration:none;">' +
+      '<span class="search-result-icon">' + m.icon + '</span>' +
+      '<div><div class="search-result-title">' + m.title + '</div><div class="search-result-desc">' + m.desc + '</div></div>' +
+      '</a>'
+    ).join('');
   }
   results.classList.add('show');
 }
-
 document.addEventListener('click', e => {
   if (!e.target.closest('.search-wrap')) document.getElementById('searchResults').classList.remove('show');
 });
